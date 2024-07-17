@@ -43,3 +43,97 @@ print("Altura:", altura)
 print("Tem filhos?", tem_filhos)
 Observações Finais
 Em Python, a flexibilidade na declaração de variáveis e a falta de necessidade de especificar tipos de dados tornam o código mais limpo e legível. No entanto, é importante seguir as convenções para facilitar a compreensão do código por outras pessoas (ou por você mesmo no futuro) e para manter consistência no estilo de programação.
+
+- ATRIBUIÇÃO ENCADEADA OU ATRIBUIÇÃO MÚLTIPLA: A atribuição encadeada, também conhecida como atribuição múltipla, é um recurso em Python que permite atribuir o mesmo valor a múltiplas variáveis em uma única linha de código. Isso é feito de forma compacta e eficiente, economizando espaço e tornando o código mais legível.
+
+Sintaxe
+A sintaxe básica da atribuição encadeada é:
+
+var1 = var2 = var3 = valor
+Nesta estrutura:
+
+valor é o valor que será atribuído às variáveis var1, var2 e var3.
+A atribuição ocorre da direita para a esquerda, ou seja, valor é atribuído primeiro à variável mais à direita (var3), depois propagado para as variáveis subsequentes na ordem.
+
+Funcionamento
+Ao executar uma expressão como var1 = var2 = var3 = valor:
+
+Atribuição do Valor: O valor à direita do sinal de atribuição (=) é avaliado primeiro.
+
+Propagação do Valor: O valor é então atribuído às variáveis da direita para a esquerda, uma por uma.
+
+Por exemplo:
+x = y = z = 10
+Neste caso:
+
+z = 10
+y = z (então y também se torna 10)
+x = y (então x também se torna 10)
+
+Vantagens
+Concisão: Reduz a quantidade de código necessário para inicializar várias variáveis com o mesmo valor.
+Legibilidade: Torna o código mais claro e fácil de entender ao agrupar operações relacionadas em uma única linha.
+Exemplos
+Atribuição de valores diferentes:
+
+a, b, c = 1, 2, 3
+print(a, b, c)  # Saída: 1 2 3
+Atribuição com um valor único para múltiplas variáveis:
+
+x = y = z = 0
+print(x, y, z)  # Saída: 0 0 0
+Considerações
+É importante notar que a atribuição encadeada funciona bem quando todas as variáveis envolvidas precisam iniciar com o mesmo valor. Se você precisa atribuir valores diferentes, é melhor usar a forma explícita, como mostrado no primeiro exemplo.
+
+A ordem da atribuição é determinada da direita para a esquerda, o que significa que o valor é propagado sequencialmente para cada variável na expressão.
+
+A atribuição encadeada é uma característica poderosa e útil em Python, permitindo escrever código mais conciso e eficiente.
+________________________________________________________________________________
+- OPERADORES ARITMÉTICOS: Os operadores aritméticos em Python são utilizados para realizar operações matemáticas básicas entre variáveis ou valores numéricos. Vamos explorar os principais operadores aritméticos em Python:
+
+Adição (+): Utilizado para adicionar dois valores.
+
+resultado = 5 + 3
+print(resultado)  # Saída: 8
+Subtração (-): Utilizado para subtrair um valor de outro.
+
+resultado = 5 - 3
+print(resultado)  # Saída: 2
+Multiplicação (*): Utilizado para multiplicar dois valores.
+
+resultado = 5 * 3
+print(resultado)  # Saída: 15
+Divisão (/): Utilizado para dividir um valor pelo outro. O resultado será sempre um número de ponto flutuante (float).
+
+resultado = 5 / 3
+print(resultado)  # Saída: 1.6666666666666667
+Divisão inteira (//): Utilizado para dividir um valor pelo outro e retornar apenas a parte inteira do resultado.
+
+resultado = 5 // 3
+print(resultado)  # Saída: 1
+Resto da divisão (%): Utilizado para obter o resto da divisão entre dois valores.
+
+resultado = 5 % 3
+print(resultado)  # Saída: 2
+Exponenciação (**): Utilizado para calcular a potência de um número.
+
+resultado = 2 ** 3
+print(resultado)  # Saída: 8
+Além desses operadores básicos, Python também suporta o uso de parênteses () para alterar a precedência das operações, da mesma forma como na matemática. Por exemplo:
+
+resultado = (5 + 3) * 2
+print(resultado)  # Saída: 16
+É importante lembrar que em expressões matemáticas, Python segue as regras de precedência padrão (PEMDAS/BODMAS):
+
+Parênteses
+Exponenciação
+Multiplicação e Divisão (da esquerda para a direita)
+Adição e Subtração (da esquerda para a direita)
+Se precisar de mais algum esclarecimento ou exemplo específico, estou à disposição!
+
+- ORDEM DE precedência DOS OPERADORES ARITMÉTICOS: 
+- Parênteses
+- Potenciação
+- Multiplicação/Divisão
+- Soma/Subtração
+- Esquerda para a Direita. 
