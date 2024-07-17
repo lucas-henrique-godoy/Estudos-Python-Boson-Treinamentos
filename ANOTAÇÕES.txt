@@ -136,4 +136,80 @@ Se precisar de mais algum esclarecimento ou exemplo específico, estou à dispos
 - Potenciação
 - Multiplicação/Divisão
 - Soma/Subtração
-- Esquerda para a Direita. 
+- Esquerda para a Direita.
+________________________________________________________________________________
+- OPERADORES DE COMPARAÇÃO: Em Python, os operadores de comparação são utilizados para comparar dois valores e retornar um resultado booleano (Verdadeiro ou Falso) com base na condição estabelecida. Aqui estão os principais operadores de comparação em Python:
+
+== (igual a):
+
+Verifica se dois valores são iguais.
+Exemplo: a == b retorna Verdadeiro se a for igual a b, caso contrário retorna Falso.
+!= (diferente de):
+
+Verifica se dois valores são diferentes.
+Exemplo: a != b retorna Verdadeiro se a for diferente de b, caso contrário retorna Falso.
+> (maior que):
+
+Verifica se o valor da esquerda é maior que o valor da direita.
+Exemplo: a > b retorna Verdadeiro se a for maior que b, caso contrário retorna Falso.
+< (menor que):
+
+Verifica se o valor da esquerda é menor que o valor da direita.
+Exemplo: a < b retorna Verdadeiro se a for menor que b, caso contrário retorna Falso.
+>= (maior ou igual a):
+
+Verifica se o valor da esquerda é maior ou igual ao valor da direita.
+Exemplo: a >= b retorna Verdadeiro se a for maior ou igual a b, caso contrário retorna Falso.
+<= (menor ou igual a):
+
+Verifica se o valor da esquerda é menor ou igual ao valor da direita.
+Exemplo: a <= b retorna Verdadeiro se a for menor ou igual a b, caso contrário retorna Falso.
+Os operadores de comparação são frequentemente utilizados em estruturas condicionais (como if, elif, else) para tomar decisões com base nas relações entre os valores das variáveis. É importante lembrar que os valores comparados não precisam ser apenas números; eles podem ser strings, listas, ou qualquer tipo de dado que possa ser comparado de acordo com as regras de comparação em Python.
+________________________________________________________________________________- OPERADORES LÓGICOS: Em Python, os operadores lógicos são usados para realizar operações lógicas entre valores booleanos (Verdadeiro ou Falso). Eles são frequentemente utilizados em expressões condicionais para combinar múltiplas condições ou inverter o valor de uma condição. Aqui estão os principais operadores lógicos em Python:
+
+and:
+
+O operador and retorna Verdadeiro se ambos os operandos forem verdadeiros.
+Exemplo: a and b retorna Verdadeiro se a for verdadeiro e b for verdadeiro.
+or:
+
+O operador or retorna Verdadeiro se pelo menos um dos operandos for verdadeiro.
+Exemplo: a or b retorna Verdadeiro se a for verdadeiro ou b for verdadeiro.
+not:
+
+O operador not é usado para inverter o valor de um operando booleano.
+Exemplo: not a retorna Verdadeiro se a for falso, e retorna Falso se a for verdadeiro.
+Esses operadores são frequentemente usados em estruturas condicionais (if, elif, else) para tomar decisões com base em múltiplas condições ou para negar uma condição. Aqui estão alguns exemplos de como esses operadores podem ser utilizados:
+
+python
+Copiar código
+# Exemplo de uso do operador and
+a = 5
+b = 10
+if a > 0 and b > 0:
+    print("Ambos a e b são maiores que zero")
+
+# Exemplo de uso do operador or
+c = 15
+d = 20
+if c > 10 or d > 10:
+    print("Pelo menos um dos valores c ou d é maior que 10")
+
+# Exemplo de uso do operador not
+e = True
+if not e:
+    print("e é falso")
+else:
+    print("e é verdadeiro")
+Neste exemplo:
+
+No primeiro bloco if, a condição a > 0 and b > 0 só será verdadeira se tanto a quanto b forem maiores que zero.
+No segundo bloco if, a condição c > 10 or d > 10 será verdadeira se pelo menos um dos valores c ou d for maior que 10.
+No terceiro bloco if, a condição not e inverte o valor de e. Se e for verdadeiro, o bloco else será executado.
+Os operadores lógicos são fundamentais para construir lógica condicional complexa e para controlar o fluxo de execução em programas Python.
+
+* Quando uma expressão contém operadores de diferentes grupos, a ordem de precedência é a seguinte (da mais alta para a mais baixa):
+
+Operadores Aritméticos
+Operadores de Comparação
+Operadores Lógicos
