@@ -4,4 +4,42 @@ Cuso de Python - BÓSON TREINAMNETOS.
 
 - Variaveis: Local reservado na memória do computador que é usado para armazenar de forma  temporária os dados  que o programa utiliza.
 EX: nome_usuario = 'Lucas'
-print(nome_usuario)
+print(nome_usuario).
+
+- Declarando Variáveis
+Atribuição Simples:
+Para declarar uma variável em Python, você simplesmente atribui um valor a um nome de variável usando o operador de atribuição (=). Por exemplo:
+
+idade = 30
+nome = "João"
+salario = 2500.50
+Convenções para Nomes de Variáveis:
+
+Case-sensitive: Python é sensível a maiúsculas e minúsculas, então nome e Nome são diferentes variáveis.
+Caracteres permitidos: Nomes de variáveis podem conter letras, números e underscores (_), mas devem começar com uma letra ou underscore. Exemplos válidos: nome, idade, _salario, idade2.
+Convenção de nomes: Use nomes descritivos que indiquem o propósito da variável. Por convenção:
+Use letras minúsculas para nomes de variáveis normais (idade, nome_completo).
+Use underscores para separar palavras em nomes de variáveis compostas (nome_completo, salario_mensal).
+Evite nomes de variáveis que são palavras reservadas do Python, como print, for, if, etc.
+Para constantes, use letras maiúsculas (TAXA_JUROS).
+Tipos de Dados
+Python é uma linguagem de tipagem dinâmica, o que significa que o tipo de uma variável é inferido pelo interpretador com base no valor atribuído a ela. Por exemplo:
+
+mensagem = "Olá, mundo!"  # mensagem é uma variável do tipo string
+numero = 42                # numero é uma variável do tipo int
+preco = 199.99             # preco é uma variável do tipo float
+Exemplo de Uso
+
+# Declaração de variáveis
+nome = "Maria"
+idade = 25
+altura = 1.75
+tem_filhos = False
+
+# Impressão dos valores das variáveis
+print("Nome:", nome)
+print("Idade:", idade)
+print("Altura:", altura)
+print("Tem filhos?", tem_filhos)
+Observações Finais
+Em Python, a flexibilidade na declaração de variáveis e a falta de necessidade de especificar tipos de dados tornam o código mais limpo e legível. No entanto, é importante seguir as convenções para facilitar a compreensão do código por outras pessoas (ou por você mesmo no futuro) e para manter consistência no estilo de programação.
