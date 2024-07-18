@@ -4,11 +4,11 @@ x = y = z = False
 # Inicialização das variáveis n1 e n2 como 0
 n1 = n2 = 0
 
-# Solicitação e leitura do primeiro número digitado pelo usuário
+#  1º Maneira de fazer Solicitação e leitura do primeiro número digitado pelo usuário
 print('Digite um número: ')
 n1 = int(input())
 
-# Solicitação e leitura do segundo número digitado pelo usuário
+# 2º Maneira de fazer Solicitação e leitura do segundo número digitado pelo usuário
 n2 = int(input('Digite outro número: '))
 
 # Verifica se n1 é igual a n2 e atribui o resultado a variável x
