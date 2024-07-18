@@ -2,7 +2,7 @@ x = y = z = 0
 # Aqui, três variáveis (x, y, z) estão sendo inicializadas com o valor 0.
 # A expressão x = y = z = 0 atribui o valor 0 para todas as três variáveis simultaneamente.
 
-# x = 7 Atribuindo valores as variáveis
+# x = 7 Atribuindo valores as variáveis de forma simples
 # y = 9
 
 x = int(input('Digite um número: '))
