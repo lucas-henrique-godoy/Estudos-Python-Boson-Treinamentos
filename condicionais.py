@@ -12,8 +12,5 @@ media = (n1 + n2) / 2
 if (media >= 7):
     print('Resultado: Aprovado!')
     print('Parabéns!')
-else:
-    print('Resultado: Reprovado!')
-    print('Você precisa estudar mais!')
 
 print('Sua média é {}' . format(media))
