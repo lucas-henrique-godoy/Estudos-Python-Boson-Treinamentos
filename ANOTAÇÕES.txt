@@ -88,7 +88,7 @@ Considerações
 A ordem da atribuição é determinada da direita para a esquerda, o que significa que o valor é propagado sequencialmente para cada variável na expressão.
 
 A atribuição encadeada é uma característica poderosa e útil em Python, permitindo escrever código mais conciso e eficiente.
-________________________________________________________________________________
+____________________________________________________________________________________________________________________________________________________________________
 - OPERADORES ARITMÉTICOS: Os operadores aritméticos em Python são utilizados para realizar operações matemáticas básicas entre variáveis ou valores numéricos. Vamos explorar os principais operadores aritméticos em Python:
 
 Adição (+): Utilizado para adicionar dois valores.
@@ -137,35 +137,29 @@ Se precisar de mais algum esclarecimento ou exemplo específico, estou à dispos
 - Multiplicação/Divisão
 - Soma/Subtração
 - Esquerda para a Direita.
-________________________________________________________________________________
+_______________________________________________________________________________________________________________________________________________________________________
 - OPERADORES DE COMPARAÇÃO: Em Python, os operadores de comparação são utilizados para comparar dois valores e retornar um resultado booleano (Verdadeiro ou Falso) com base na condição estabelecida. Aqui estão os principais operadores de comparação em Python:
 
-== (igual a):
-
-Verifica se dois valores são iguais.
+== (igual a): Verifica se dois valores são iguais.
 Exemplo: a == b retorna Verdadeiro se a for igual a b, caso contrário retorna Falso.
-!= (diferente de):
 
-Verifica se dois valores são diferentes.
+!= (diferente de): Verifica se dois valores são diferentes.
 Exemplo: a != b retorna Verdadeiro se a for diferente de b, caso contrário retorna Falso.
 > (maior que):
 
 Verifica se o valor da esquerda é maior que o valor da direita.
 Exemplo: a > b retorna Verdadeiro se a for maior que b, caso contrário retorna Falso.
-< (menor que):
 
-Verifica se o valor da esquerda é menor que o valor da direita.
+< (menor que): Verifica se o valor da esquerda é menor que o valor da direita.
 Exemplo: a < b retorna Verdadeiro se a for menor que b, caso contrário retorna Falso.
->= (maior ou igual a):
 
-Verifica se o valor da esquerda é maior ou igual ao valor da direita.
+>= (maior ou igual a): Verifica se o valor da esquerda é maior ou igual ao valor da direita.
 Exemplo: a >= b retorna Verdadeiro se a for maior ou igual a b, caso contrário retorna Falso.
-<= (menor ou igual a):
 
-Verifica se o valor da esquerda é menor ou igual ao valor da direita.
+<= (menor ou igual a): Verifica se o valor da esquerda é menor ou igual ao valor da direita.
 Exemplo: a <= b retorna Verdadeiro se a for menor ou igual a b, caso contrário retorna Falso.
 Os operadores de comparação são frequentemente utilizados em estruturas condicionais (como if, elif, else) para tomar decisões com base nas relações entre os valores das variáveis. É importante lembrar que os valores comparados não precisam ser apenas números; eles podem ser strings, listas, ou qualquer tipo de dado que possa ser comparado de acordo com as regras de comparação em Python.
-________________________________________________________________________________________________________________
+_______________________________________________________________________________________________________________________________________________________________________
 - OPERADORES LÓGICOS: Em Python, os operadores lógicos são usados para realizar operações lógicas entre valores booleanos (Verdadeiro ou Falso). Eles são frequentemente utilizados em expressões condicionais para combinar múltiplas condições ou inverter o valor de uma condição. 
 
 Aqui estão os principais operadores lógicos em Python:
@@ -210,7 +204,7 @@ Os operadores lógicos são fundamentais para construir lógica condicional comp
 Operadores Aritméticos
 Operadores de Comparação
 Operadores Lógicos
-________________________________________________________________________________________________________________
+_______________________________________________________________________________________________________________________________________________________________________
 
 - FUNÇÃO PRINT() E COMO FORMATAR A SAÍDA: Em Python, a função print() é utilizada para exibir informações na tela ou em outro dispositivo de saída, como um arquivo de texto. Ela é uma das funções mais básicas e úteis para interação com o usuário e para depuração de código.
 
@@ -262,5 +256,75 @@ idade = 22
 print("Meu nome é {} e eu tenho {} anos.".format(nome, idade))
 Conclusão
 A função print() é fundamental para exibir informações durante a execução de programas em Python. Através dela, você pode controlar o que é exibido na tela, formatando a saída conforme necessário para tornar suas mensagens mais claras e informativas.
+_______________________________________________________________________________________________________________________________________________________________________
+
+- ESTRUTURAS DE REPETIÇÃO: Em Python, existem duas principais estruturas de repetição: o loop for e o loop while. Essas estruturas são fundamentais para executar blocos de código repetidamente com base em certas condições ou iterações. Vamos explorar cada uma delas em detalhes:
+
+1. Loop for
+O loop for é usado quando você sabe exatamente quantas vezes deseja repetir um bloco de código, geralmente com base em uma sequência (como uma lista, tupla, dicionário, string, etc.).
+
+Sintaxe:
+for item in sequencia:
+    # Bloco de código a ser repetido
+    # Use 'item' para acessar o elemento atual da sequência
+item: Variável que recebe cada elemento da sequência a cada iteração.
+sequencia: É a sequência de elementos sobre a qual o loop for vai iterar.
+Exemplo:
+nomes = ["Ana", "Carlos", "Maria"]
+
+for nome in nomes:
+    print(f"Olá, {nome}!")
+Neste exemplo, o loop for itera sobre a lista nomes e imprime uma saudação para cada nome na lista.
+
+2. Loop while
+O loop while é usado quando você quer repetir um bloco de código enquanto uma condição específica for verdadeira. Ele continua repetindo até que a condição não seja mais atendida.
+
+Sintaxe:
+while condição:
+    # Bloco de código a ser repetido enquanto a condição for verdadeira
+condição: É a expressão booleana que determina se o loop deve continuar ou não.
+Exemplo:
+contador = 0
+
+while contador < 5:
+    print(f"Contagem: {contador}")
+    contador += 1
+
+Neste exemplo, o loop while imprime a contagem de 0 a 4, porque o bloco de código é repetido enquanto contador < 5.
+
+Controle de Loop
+Ambos os loops for e while podem ser controlados com as seguintes instruções:
+
+break: Termina o loop imediatamente, mesmo que a condição do loop while ainda seja verdadeira ou que ainda haja itens na sequência do loop for.
+
+continue: Pula o restante do código dentro do loop atual e passa para a próxima iteração do loop.
+
+Exemplo com break:
+for i in range(10):
+    if i == 5:
+        break
+    print(i)
+Neste exemplo, o loop for é interrompido quando i é igual a 5, usando break.
+
+Exemplo com continue:
+for i in range(10):
+    if i % 2 == 0:
+        continue
+    print(i)
+Neste exemplo, continue é usado para pular a impressão de números pares (i % 2 == 0), e apenas números ímpares são impressos.
+
+Iteração com Índices
+Às vezes, você pode precisar iterar não apenas sobre os elementos de uma sequência, mas também sobre seus índices. Para isso, você pode usar a função enumerate().
+
+Exemplo:
+nomes = ["Ana", "Carlos", "Maria"]
+
+for indice, nome in enumerate(nomes):
+    print(f"Índice {indice}: {nome}")
+Neste exemplo, enumerate(nomes) retorna tuplas onde o primeiro elemento é o índice e o segundo é o nome correspondente na lista nomes.
+
+Conclusão
+As estruturas de repetição em Python (for e while) são poderosas e flexíveis, permitindo automatizar tarefas repetitivas de maneira eficiente. A escolha entre usar for ou while depende da situação específica: for quando você sabe o número de iterações antecipadamente ou precisa iterar sobre uma sequência, e while quando você precisa iterar baseado em uma condição booleana. Dominar essas estruturas é essencial para escrever código Python eficiente e conciso.
+
 
 
