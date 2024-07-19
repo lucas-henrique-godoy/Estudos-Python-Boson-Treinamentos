@@ -325,6 +325,40 @@ Neste exemplo, enumerate(nomes) retorna tuplas onde o primeiro elemento é o ín
 
 Conclusão
 As estruturas de repetição em Python (for e while) são poderosas e flexíveis, permitindo automatizar tarefas repetitivas de maneira eficiente. A escolha entre usar for ou while depende da situação específica: for quando você sabe o número de iterações antecipadamente ou precisa iterar sobre uma sequência, e while quando você precisa iterar baseado em uma condição booleana. Dominar essas estruturas é essencial para escrever código Python eficiente e conciso.
+_______________________________________________________________________________________________________________________________________________________________________
+
+- FUNÇÃO RANGE: A função range() em Python é utilizada para gerar uma sequência de números. Ela pode ser usada de várias maneiras, mas os usos mais comuns são com um, dois ou três argumentos.
+
+Com um argumento: range(stop)
+
+Retorna uma sequência que vai de 0 até stop - 1.
+Exemplo: range(5) gera os números 0, 1, 2, 3, 4.
+Com dois argumentos: range(start, stop)
+
+Retorna uma sequência que vai de start até stop - 1.
+Exemplo: range(2, 6) gera os números 2, 3, 4, 5.
+Com três argumentos: range(start, stop, step)
+
+Retorna uma sequência que vai de start até stop - 1, incrementando em step a cada passo.
+Exemplo: range(1, 10, 2) gera os números 1, 3, 5, 7, 9.
+É importante notar que a função range() retorna um objeto do tipo range, não uma lista com todos os valores imediatamente. Isso faz com que seja eficiente em termos de memória, especialmente com sequências grandes.
+
+Exemplos de uso:
+
+# Exemplo 1: range(stop)
+for i in range(5):
+    print(i)  # Imprime os números de 0 a 4
+
+# Exemplo 2: range(start, stop)
+for i in range(2, 6):
+    print(i)  # Imprime os números de 2 a 5
+
+# Exemplo 3: range(start, stop, step)
+for i in range(1, 10, 2):
+    print(i)  # Imprime os números ímpares de 1 a 9
+Observações:
+A função range() é comumente usada em laços (for) para iterar sobre uma sequência de números.
+Se você precisa de uma lista dos números, pode convertê-la explicitamente usando list(range(...)).
 
 
 
