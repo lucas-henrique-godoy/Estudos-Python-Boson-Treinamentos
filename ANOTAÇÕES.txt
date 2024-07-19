@@ -165,24 +165,21 @@ Exemplo: a >= b retorna Verdadeiro se a for maior ou igual a b, caso contrário 
 Verifica se o valor da esquerda é menor ou igual ao valor da direita.
 Exemplo: a <= b retorna Verdadeiro se a for menor ou igual a b, caso contrário retorna Falso.
 Os operadores de comparação são frequentemente utilizados em estruturas condicionais (como if, elif, else) para tomar decisões com base nas relações entre os valores das variáveis. É importante lembrar que os valores comparados não precisam ser apenas números; eles podem ser strings, listas, ou qualquer tipo de dado que possa ser comparado de acordo com as regras de comparação em Python.
-________________________________________________________________________________- OPERADORES LÓGICOS: Em Python, os operadores lógicos são usados para realizar operações lógicas entre valores booleanos (Verdadeiro ou Falso). Eles são frequentemente utilizados em expressões condicionais para combinar múltiplas condições ou inverter o valor de uma condição. Aqui estão os principais operadores lógicos em Python:
+________________________________________________________________________________________________________________
+- OPERADORES LÓGICOS: Em Python, os operadores lógicos são usados para realizar operações lógicas entre valores booleanos (Verdadeiro ou Falso). Eles são frequentemente utilizados em expressões condicionais para combinar múltiplas condições ou inverter o valor de uma condição. 
 
-and:
+Aqui estão os principais operadores lógicos em Python:
 
-O operador and retorna Verdadeiro se ambos os operandos forem verdadeiros.
+- AND: O operador and retorna Verdadeiro se ambos os operandos forem verdadeiros.
 Exemplo: a and b retorna Verdadeiro se a for verdadeiro e b for verdadeiro.
-or:
 
-O operador or retorna Verdadeiro se pelo menos um dos operandos for verdadeiro.
+- OR:O operador or retorna Verdadeiro se pelo menos um dos operandos for verdadeiro.
 Exemplo: a or b retorna Verdadeiro se a for verdadeiro ou b for verdadeiro.
-not:
 
-O operador not é usado para inverter o valor de um operando booleano.
+- NOT: O operador not é usado para inverter o valor de um operando booleano.
 Exemplo: not a retorna Verdadeiro se a for falso, e retorna Falso se a for verdadeiro.
 Esses operadores são frequentemente usados em estruturas condicionais (if, elif, else) para tomar decisões com base em múltiplas condições ou para negar uma condição. Aqui estão alguns exemplos de como esses operadores podem ser utilizados:
 
-python
-Copiar código
 # Exemplo de uso do operador and
 a = 5
 b = 10
@@ -213,3 +210,5 @@ Os operadores lógicos são fundamentais para construir lógica condicional comp
 Operadores Aritméticos
 Operadores de Comparação
 Operadores Lógicos
+_____________________________________________________________________________________________________________________________________________________________________
+
