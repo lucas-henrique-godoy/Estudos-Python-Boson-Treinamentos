@@ -210,5 +210,57 @@ Os operadores lógicos são fundamentais para construir lógica condicional comp
 Operadores Aritméticos
 Operadores de Comparação
 Operadores Lógicos
-_____________________________________________________________________________________________________________________________________________________________________
+________________________________________________________________________________________________________________
+
+- FUNÇÃO PRINT() E COMO FORMATAR A SAÍDA: Em Python, a função print() é utilizada para exibir informações na tela ou em outro dispositivo de saída, como um arquivo de texto. Ela é uma das funções mais básicas e úteis para interação com o usuário e para depuração de código.
+
+- A sintaxe básica da função print() é simples:
+print(objeto1, objeto2, ..., sep=' ', end='\n', file=sys.stdout, flush=False)
+objeto1, objeto2, ...: São os objetos que você deseja imprimir na tela. Você pode passar vários objetos separados por vírgula, e o print() os exibirá sequencialmente.
+
+sep=' ': É o separador entre os objetos. Por padrão, é um espaço em branco, mas você pode alterá-lo para qualquer string que desejar.
+
+end='\n': É o que será adicionado ao final da impressão. Por padrão, é uma nova linha ('\n'), o que significa que após imprimir, o cursor irá para a linha seguinte. Você pode mudar isso para qualquer outra string.
+
+file=sys.stdout: Define para onde a saída será direcionada. Por padrão, é a saída padrão do sistema (normalmente, a tela). Você pode redirecionar a saída para um arquivo, por exemplo.
+
+flush=False: Se for True, a saída será forçada (ou seja, será exibida imediatamente). Por padrão, é False.
+
+Exemplos de Uso
+Exemplo Simples:
+
+print("Olá, mundo!")
+Neste caso, "Olá, mundo!" será impresso na tela seguido de uma nova linha.
+
+Impressão de Vários Objetos:
+
+nome = "Alice"
+idade = 30
+print("Nome:", nome, "Idade:", idade)
+Aqui, nome e idade são variáveis que são impressas junto com strings adicionais.
+
+Alterando o Separador e o Final:
+
+print("Python", "é", "divertido", sep="-", end="!\n")
+Esta linha irá imprimir "Python-é-divertido!" na tela, utilizando "-" como separador entre as palavras e exclamação (!) como o caractere final.
+
+Formatação da Saída
+Além da função print(), você pode utilizar formatação de string para controlar como os valores são exibidos. A partir do Python 3.6, é recomendado utilizar f-strings para formatação de string, devido à sua clareza e facilidade de uso.
+
+Exemplo de f-string:
+
+nome = "Carlos"
+idade = 25
+print(f"Meu nome é {nome} e eu tenho {idade} anos.")
+Neste caso, {nome} e {idade} são substituídos pelos valores das variáveis nome e idade.
+
+Outros Métodos de Formatação:
+Você também pode usar métodos como .format() para formatar strings:
+
+nome = "Ana"
+idade = 22
+print("Meu nome é {} e eu tenho {} anos.".format(nome, idade))
+Conclusão
+A função print() é fundamental para exibir informações durante a execução de programas em Python. Através dela, você pode controlar o que é exibido na tela, formatando a saída conforme necessário para tornar suas mensagens mais claras e informativas.
+
 
