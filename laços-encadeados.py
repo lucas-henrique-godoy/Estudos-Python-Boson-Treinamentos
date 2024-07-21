@@ -3,8 +3,7 @@
 # Laço externo que itera de 1 a 5 (inclusive)
 for cont_externo in range(1, 6):
     # Imprime o número da rodada
-    print(f'\nRodada: {cont_externo}')
-    
+    print(f'\nRodada: {cont_externo}')    
     # Laço interno que itera de 5 a 1 (inclusive), com passo -1
     for cont_interno in range(5, 0, -1):
         # Imprime o valor atual do laço interno
