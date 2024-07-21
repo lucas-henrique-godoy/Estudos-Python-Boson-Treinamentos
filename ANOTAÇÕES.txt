@@ -1,5 +1,6 @@
 Cuso de Python - BÓSON TREINAMNETOS.
 
+
 - Comentários: #. Para comentar várias linhas selecione o código que deseja comenta e aperte CTR + K + C. E para descomentar aperte CTR + K + U.
 
 - Variaveis: Local reservado na memória do computador que é usado para armazenar de forma  temporária os dados  que o programa utiliza.
