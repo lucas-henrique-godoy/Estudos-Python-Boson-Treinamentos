@@ -1,5 +1,38 @@
 Cuso de Python - BÓSON TREINAMNETOS.
 
+_______________________________________________________________________________________________________________________________________________________________________
+ 				*** SITE PYPI ***
+
+- O site https://pypi.org/ é o Python Package Index, conhecido como PyPI. Ele é o repositório oficial de pacotes para a linguagem de programação Python. PyPI é um recurso fundamental para desenvolvedores Python que desejam compartilhar, descobrir e instalar pacotes de software Python.
+
+Principais Funções e Utilidades do PyPI:
+Repositório de Pacotes Python:
+
+PyPI hospeda milhares de pacotes de software Python desenvolvidos pela comunidade. Isso inclui bibliotecas, frameworks, ferramentas e aplicativos que podem ser utilizados para uma variedade de finalidades, desde desenvolvimento web até ciência de dados, automação, entre outros.
+Instalação de Pacotes:
+
+Desenvolvedores Python utilizam o PyPI principalmente para buscar e instalar pacotes de software Python usando a ferramenta pip. O pip é o gerenciador de pacotes padrão do Python, e se integra diretamente com o PyPI para buscar e instalar pacotes especificados.
+Contribuição e Colaboração:
+
+PyPI facilita a colaboração e contribuição na comunidade Python. Desenvolvedores podem publicar seus próprios pacotes Python no PyPI, permitindo que outros utilizem e contribuam para melhorias.
+Versionamento e Distribuição:
+
+Pacotes Python no PyPI são versionados, permitindo que desenvolvedores especifiquem versões específicas dos pacotes que desejam instalar. Isso é crucial para garantir a consistência e compatibilidade das dependências em projetos Python.
+Documentação e Informações:
+
+Cada pacote no PyPI geralmente inclui informações detalhadas, como documentação, descrição, requisitos de instalação, links para o código-fonte, entre outros. Isso ajuda os desenvolvedores a entenderem como usar e integrar os pacotes em seus projetos.
+Busca e Descoberta:
+
+PyPI oferece funcionalidades de busca avançada, permitindo que desenvolvedores encontrem pacotes relevantes com base em palavras-chave, popularidade, categoria, entre outros critérios.
+Como Usar o PyPI:
+Para instalar um pacote Python do PyPI, você pode usar o pip no terminal. Por exemplo, para instalar o pacote requests, um popular pacote para fazer requisições HTTP em Python, você pode executar:
+
+pip install requests
+Isso baixará e instalará o pacote requests e quaisquer dependências que ele possa ter do PyPI.
+
+Em resumo, o PyPI é um recurso essencial para a comunidade Python, proporcionando acesso fácil a uma vasta gama de pacotes de software Python, facilitando o desenvolvimento e a colaboração na plataforma Python.
+_______________________________________________________________________________________________________________________________________________________________________
+
 
 - Comentários: #. Para comentar várias linhas selecione o código que deseja comenta e aperte CTR + K + C. E para descomentar aperte CTR + K + U.
 
