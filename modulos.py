@@ -6,7 +6,7 @@
 
 # EX3 - from math import * -> Import universal: Importa todas as funções de um módulo, não é muito recomendado, pois pode gerar conflitos om outros pacotes que podem possuir os mesmos nomes de algum constituinte dessa biblioteca. Usar com cautela.
 
-# EX4 -  import math as m -> Utilizando apelidos.
+# EX4 -  import math as m -> Utilizando apelidos. Nesse caso eu escolhi m como apelido.
 # print(m.sqrt(81))
 
 import mod_func as mf # Importa o módulo mod_func e usa o alias mf para se referir a ele
