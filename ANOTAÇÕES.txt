@@ -393,6 +393,100 @@ for i in range(1, 10, 2):
 Observações:
 A função range() é comumente usada em laços (for) para iterar sobre uma sequência de números.
 Se você precisa de uma lista dos números, pode convertê-la explicitamente usando list(range(...)).
+_______________________________________________________________________________________________________________________________________________________________________
+
+-MANEIRAS PARA IMPORTAR MÓDULOS EM PYTHON: Em Python, há várias maneiras de importar módulos para utilizar funcionalidades adicionais no seu código. Aqui estão as principais formas de importar módulos:
+
+Importação Simples
+A forma mais básica de importar um módulo é usando a declaração import. Com essa forma, você pode acessar funções, classes e variáveis definidas no módulo importado usando o nome do módulo como um prefixo.
+
+python
+Copiar código
+import math
+
+# Exemplo de uso:
+print(math.sqrt(25))  # Saída: 5.0
+Renomeando Módulos ao Importar
+Você pode renomear o módulo que está importando para facilitar o seu uso no código usando a palavra-chave as.
+
+python
+Copiar código
+import math as m
+
+# Exemplo de uso:
+print(m.sqrt(25))  # Saída: 5.0
+Importar Partes Específicas de um Módulo
+Às vezes, você só precisa importar funções ou classes específicas de um módulo, em vez de importar o módulo inteiro. Isso pode ser feito usando a sintaxe from ... import ....
+
+python
+Copiar código
+from math import sqrt
+
+# Exemplo de uso:
+print(sqrt(25))  # Saída: 5.0
+Você também pode importar múltiplas funções ou classes separando-as por vírgula:
+
+python
+Copiar código
+from math import sqrt, floor
+
+# Exemplo de uso:
+print(sqrt(25))   # Saída: 5.0
+print(floor(5.8))  # Saída: 5
+Importar Todo o Módulo e Acessar os Itens Diretamente
+Se você deseja importar todas as funções e variáveis de um módulo e usá-las diretamente sem o prefixo do nome do módulo, você pode fazer isso usando from ... import *. No entanto, isso não é recomendado em práticas de programação limpa devido ao risco de conflitos de nome e dificuldades na manutenção do código.
+
+python
+Copiar código
+from math import *
+
+# Exemplo de uso:
+print(sqrt(25))   # Saída: 5.0
+print(floor(5.8))  # Saída: 5
+Importar Módulo para Uso de Código
+Às vezes, você pode querer importar um módulo para seu código, mas não deseja executar diretamente o código do módulo. Nesse caso, você pode usar a seguinte sintaxe:
+
+python
+Copiar código
+import module_name
+
+if __name__ == "__main__":
+    # Código que será executado apenas quando este arquivo for executado diretamente
+    pass
+Importar Pacotes e Submódulos
+Em Python, pacotes são diretórios que contêm módulos e subpacotes. Você pode importar um módulo específico dentro de um pacote ou um submódulo dentro de um pacote usando a sintaxe de ponto.
+
+python
+Copiar código
+# Importar um módulo específico dentro de um pacote
+import package.module
+
+# Exemplo de uso:
+package.module.function()
+
+# Importar um submódulo dentro de um pacote
+from package import subpackage
+
+# Exemplo de uso:
+subpackage.submodule.function()
+Importação Condicionada
+Às vezes, você pode querer importar um módulo apenas se uma determinada condição for verdadeira. Isso pode ser útil em casos onde a disponibilidade de um módulo pode depender do ambiente ou do sistema.
+
+python
+Copiar código
+if condition:
+    import module_name
+Importação Relativa
+A importação relativa é usada para importar módulos que estão no mesmo pacote ou subpacote. Ela é feita usando pontos para indicar a posição relativa do módulo em relação ao módulo atual.
+
+python
+Copiar código
+# Importar um módulo de um nível superior
+from .. import module_name
+
+# Importar um módulo do mesmo nível
+from . import module_name
+Essas são as principais formas de importar módulos em Python. A escolha da forma de importação depende da sua necessidade específica e das boas práticas de programação que você deseja seguir.
 
 
 
