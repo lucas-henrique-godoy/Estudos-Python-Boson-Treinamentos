@@ -106,9 +106,21 @@
 # EXERCICIO:  Crie um script que peça para o usuário digitar o nome de 5 bebidas favoritas dele, armazenando esses valores em uma lista.
 # Na sequência, exiba na tela os elementos da lista em ordem alfabética, um por linha, usando um laço de repetição for.
 
+bebidas = []  # Inicializa uma lista vazia para armazenar as bebidas
 
+# Loop para iterar 5 vezes
+for i in range(5):
+    print(f'Digite uma bebida favorita: ')  # Solicita ao usuário que digite o nome de uma bebida
+    bebida = input()  # Captura a entrada do usuário (nome da bebida) e armazena na variável bebida
+    bebidas.append(bebida)  # Adiciona a bebida digitada à lista bebidas
 
-    
+bebidas.sort()  # Ordena a lista bebidas em ordem alfabética
+
+print(f'\nBebidas escolhidas: ')
+for bebida in bebidas:
+    print(bebida)  # Imprime cada bebida da lista ordenada, uma por linha
+
+print(f'\nSaúde!')  # Exibe uma mensagem de encerramento após exibir todas as bebidas
 
 
     
