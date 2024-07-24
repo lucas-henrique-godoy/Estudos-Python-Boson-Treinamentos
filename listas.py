@@ -103,7 +103,7 @@
 
 #___________________________________________________________________________________________________________
 
-#EXERCICIO:  Crie um script que peça para o usuário digitar o nome de 5 bebidas favoritas dele, armazenando esses valores em uma lista.
+# EXERCICIO:  Crie um script que peça para o usuário digitar o nome de 5 bebidas favoritas dele, armazenando esses valores em uma lista.
 #Na sequência, exiba na tela os elementos da listaem ordem alfabética, um por linha, usando um laço de re´petição for.
 
 
