@@ -490,7 +490,7 @@ ________________________________________________________________________________
 
 _______________________________________________________________________________________________________________________________________________________________________
 
-- SLICING: O slicing em Python é uma técnica usada para acessar partes específicas de uma sequência, como uma lista, tupla ou string. Simplificadamente, o slicing permite que você corte ou "fatie" uma sequência utilizando índices para selecionar elementos de interesse.
+- SLICING: O slicing em Python é uma técnica usada para acessar partes específicas de uma sequência, como uma lista, tupla ou string. Simplificadamente, o slicing permite que você corte ou "fatie" uma sequência utilizando índices para selecionar elementos de interesse. 
 
 Sintaxe Básica do Slicing:
 A sintaxe geral para o slicing é:
@@ -541,6 +541,46 @@ Considerações Finais:
 Mutabilidade: Listas são mutáveis, ou seja, você pode modificar elementos usando slicing.
 Imutabilidade: Strings e tuplas são imutáveis, então slicing nelas cria novas sequências ao invés de modificá-las.
 Flexibilidade: Slicing é uma funcionalidade poderosa que permite manipular dados de forma eficiente e concisa em Python, sendo amplamente utilizada para acessar e manipular partes de sequências.
+_______________________________________________________________________________________________________________________________________________________________________
+
+*** OBS: O slicing em Python não retorna a quantidade de valores especificada menos um. Vamos esclarecer como funciona:
+
+Compreendendo o Slicing:
+Quando você utiliza o slicing em Python com a sintaxe sequencia[inicio:fim:passo], os elementos selecionados são determinados da seguinte maneira:
+
+Índice de Início (inicio):
+
+É o índice onde o slicing começa. Este elemento é incluído na seleção.
+Índice de Fim (fim):
+
+É o índice onde o slicing termina. Este elemento não é incluído na seleção. Se omitido, o slicing vai até o final da sequência.
+Passo (passo):
+
+É o intervalo entre os elementos selecionados. Se omitido, o passo padrão é 1.
+Exemplos de Utilização:
+Lista:
+
+lista = [1, 2, 3, 4, 5]
+parte = lista[1:4]  # Retorna [2, 3, 4], pois inclui índices 1, 2 e 3
+String:
+
+texto = "Python"
+parte = texto[1:4]  # Retorna "yth", pois inclui caracteres nas posições 1, 2 e 3
+Índices Negativos:
+
+lista = [1, 2, 3, 4, 5]
+parte = lista[-3:-1]  # Retorna [3, 4], inclui índices -3 e -2 (exclui -1)
+O Retorno do Slicing:
+O slicing retorna todos os elementos da sequência que estão dentro do intervalo definido pelos índices de início e fim. O elemento no índice de fim não é incluído na seleção. Portanto, o número de elementos retornados depende dos índices especificados e não é simplesmente a quantidade especificada menos um.
+
+Exemplo Clarificador:
+Se você usar lista[1:4], você está pedindo os elementos nos índices 1, 2 e 3. O último índice especificado (4) não está incluído na seleção. Portanto, o slicing retorna todos os elementos entre o índice de início (incluído) e o índice de fim (excluído).
+
+Conclusão:
+O slicing em Python é uma ferramenta poderosa e flexível para acessar partes de sequências. É importante entender que o intervalo especificado determina quais elementos serão incluídos na seleção, e o elemento no índice de fim não é parte do resultado retornado pelo slicing.
+
+
+
 
 
 
