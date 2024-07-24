@@ -11,7 +11,7 @@ halogenios = ('F', 'Cl', 'Br', 'I', 'At')
 gases_nobres = ('He', 'Ne', 'Ar', 'Xe', 'Kr', 'Rn')
 elementos = halogenios + gases_nobres # Concatenação de tuplas. Junta as 2 tuplas em uma e atribui a tupla resultante na variavel elementod
 t1 = (5,2,6,8,4,5,6,4,4,0,12,22,3,4,5)
-print(halogenicos[-2:])
+print(halogenios[-2:])
 print('Fe' in halogenios) # Verifica se 'Fe' esta dentro da tupla e retorna um booleano. Neste caso um False
 print(sum(t1)) # Soma os elementos da tupla
 print(min(t1)) # retorna o valor minimo que esta dentro da tupla
