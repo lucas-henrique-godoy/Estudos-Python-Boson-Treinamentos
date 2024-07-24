@@ -48,7 +48,7 @@ print(type(alcalinos))
 # Não é possível reordenar os elementos dentro de uma tupla, porém é possível criar uma nova tupla com os elementos de uma tupla classificados.
 
 print(sorted(alcalinos)) # ordena os elementos de um iterável (como uma lista, tupla, string, etc.) em ordem crescente ou alfabética e retorna uma nova lista com esses elementos ordenados.
-print(alcalinos.sort()) # Esse método de ordenação não funciona em tuplas pois modifica seus elementos.
+#print(alcalinos.sort()) # Esse método de ordenação não funciona em tuplas pois modifica seus elementos.
 
 #  OBS: sorted() é uma função que cria uma nova lista ordenada a partir de qualquer objeto iterável, sem modificar o original.
 
