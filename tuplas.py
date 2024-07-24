@@ -11,5 +11,5 @@ halogenicos = ('F', 'Cl', 'Br', 'I', 'At')
 gases_nobres = ('He', 'Ne', 'Ar', 'Xe', 'Kr', 'Rn')
 elementos = halogenicos + gases_nobres
 #t1 = (5,2,6,8,4,5,6,4,4,0,12,22,3,4,5)
-print(elementos[0:6])
+print(halogenicos[0:3])
 
