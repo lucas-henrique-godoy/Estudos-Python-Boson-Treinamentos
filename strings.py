@@ -1,75 +1,75 @@
 # STRINGS
 
 # EXEMPLO 1
-#nome = 'Curso de Python'
-#instrutor = ' Fábio'
-#letra = nome[2] # Mostra o valor que esta na posição 2 da frase na lista.
-#print(letra)
-#print(nome + ' com ' + instrutor) # Concatenando strings
+nome = 'Curso de Python'
+instrutor = ' Fábio'
+letra = nome[2] # Mostra o valor que esta na posição 2 da frase na lista.
+print(letra)
+print(nome + ' com ' + instrutor) # Concatenando strings
 #print(len(nome)) # Retorna o valor do comprimento da strings
 
 #________________________________________________________________________________________________________________
 
 # EXEMPLO 2
-#frase = 'Vamos aprender python hoje.'
-#palavras = frase.split() # Divide a string em partes, separadas por espaço por padrao criando assim uma lista de strings. Todas as palavras separadas por espaço se transformou em um item de uma lista, que agora podem ser acessados individualmente inclusive com [].
-#print(palavras[1])
+frase = 'Vamos aprender python hoje.'
+palavras = frase.split() # Divide a string em partes, separadas por espaço por padrao criando assim uma lista de strings. Todas as palavras separadas por espaço se transformou em um item de uma lista, que agora podem ser acessados individualmente inclusive com [].
+print(palavras[1])
 #________________________________________________________________________________________________________________
 
 # Iterando sobre cada frase
-# for palavra in palavras:
-#     print(palavra)
+for palavra in palavras:
+    print(palavra)
 #________________________________________________________________________________________________________________
 
 # Iterando sobre cada letra 
-# for letra in frase:
-#     print(letra)
+for letra in frase:
+    print(letra)
 
 #________________________________________________________________________________________________________________
 
 # SLINCING COM STRINGS: EX 1 
-#print(frase[-3:])
+print(frase[-3:])
 
 #________________________________________________________________________________________________________________
 
 # SLINCING COM STRINGS: EX 2
 # Solicita ao usuário que digite seu endereço de e-mail e armazena na variável 'email'
-#email = input('Digite seu endereço de email: ')
+email = input('Digite seu endereço de email: ')
 
 # Encontra a posição do caractere '@' na string 'email' e armazena em 'arroba'
-#arroba = email.find('@')
+arroba = email.find('@')
 
 # Imprime a posição do caractere '@' na string 'email'
-#print(arroba)
+print(arroba)
 
 # Extrai o nome de usuário (parte antes do '@') da string 'email' e armazena em 'usuario'
-#usuario = email[0:arroba]
+usuario = email[0:arroba]
 
 # Extrai o domínio (parte depois do '@') da string 'email' e armazena em 'dominio'
-#dominio = email[arroba+1:]
+dominio = email[arroba+1:]
 
 # Imprime o nome de usuário
-#print(usuario)
+print(usuario)
 
 # Imprime o domínio
-#print(dominio)
+print(dominio)
 
 
 #________________________________________________________________________________________________________________
 
 # FOR COM STRINGS
-# produtos = 'carbonato de sódio e óxido de zinco'
-# print('sódio' in produtos)
-# print('magnésio' not in produtos)
+produtos = 'carbonato de sódio e óxido de zinco'
+print('sódio' in produtos)
+print('magnésio' not in produtos)
 
 #________________________________________________________________________________________________________________
 
 # ENCONTRANDO ELEMENTOS NA STRING
-# item = 'hipoclorito'
-# pos = item.find('clor') # usando para encontrar um sub string dentro de outra ou um caractere
-# print(pos)
-# pos = item.find('flu') # retorna -1. Quando o método .find() retorna -1 significa que o valor não foi encontrado, e posso usar esse valor - 1 para fazer algum teste com if por exemplo.
-# print(pos)
+item = 'hipoclorito'
+pos = item.find('clor') # usando para encontrar um sub string dentro de outra ou um caractere
+print(pos)
+pos = item.find('flu') # retorna -1. Quando o método .find() retorna -1 significa que o valor não foi encontrado, e posso usar esse valor - 1 para fazer algum teste com if por exemplo.
+print(pos)
 
 #________________________________________________________________________________________________________________
 
