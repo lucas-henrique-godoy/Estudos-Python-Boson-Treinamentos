@@ -9,6 +9,7 @@
 #print(len(nome)) # Retorna o valor do comprimento da strings
 
 #________________________________________________________________________________________________________________
+
 # EXEMPLO 2
 #frase = 'Vamos aprender python hoje.'
 #palavras = frase.split() # Divide a string em partes, separadas por espaço por padrao criando assim uma lista de strings. Todas as palavras separadas por espaço se transformou em um item de uma lista, que agora podem ser acessados individualmente inclusive com [].
@@ -25,10 +26,12 @@
 #     print(letra)
 
 #________________________________________________________________________________________________________________
+
 # SLINCING COM STRINGS: EX 1 
 #print(frase[-3:])
 
 #________________________________________________________________________________________________________________
+
 # SLINCING COM STRINGS: EX 2
 # Solicita ao usuário que digite seu endereço de e-mail e armazena na variável 'email'
 #email = input('Digite seu endereço de email: ')
@@ -53,12 +56,14 @@
 
 
 #________________________________________________________________________________________________________________
+
 # FOR COM STRINGS
 # produtos = 'carbonato de sódio e óxido de zinco'
 # print('sódio' in produtos)
 # print('magnésio' not in produtos)
 
 #________________________________________________________________________________________________________________
+
 # ENCONTRANDO ELEMENTOS NA STRING
 # item = 'hipoclorito'
 # pos = item.find('clor') # usando para encontrar um sub string dentro de outra ou um caractere
@@ -82,11 +87,13 @@ objeto_celeste3 = 'galáxia esPiral M33'
 print(objeto_celeste3.capitalize())
 
 #________________________________________________________________________________________________________________
+
 # COLOCA CADA LETRA DE CADA PALAVRA EM MAIÚSCULA:
 objeto_celeste4 = 'galáxia esPiral M34'
 print(objeto_celeste4.title())
 
 #________________________________________________________________________________________________________________
+
 # Substituindo um termo por outro. O método .replace() em Python é utilizado para substituir todas as ocorrências de um determinado termo por outro dentro de uma string.
 suplemento = 'cloreto de magnésio'
 novo_suplemento = suplemento.replace('magnésio', 'zinco') # 1º O que quero alterar, 2º O queremos colocar no lugar.
@@ -94,6 +101,7 @@ print(suplemento)
 print(novo_suplemento)
 
 #________________________________________________________________________________________________________________
+
 # TRABALHANDO COM ESPAÇOS EM BRANCO:
 
 frase = '    Ômega 3 é bom para a saude!    '
@@ -103,6 +111,7 @@ print(frase.rstrip()) # right - Remove os espaços a mais à direita da frase.
 print(frase.strip()) # ambos- Remove tanto à esquerda quanto à direita ao memso tempo.
 
 #________________________________________________________________________________________________________________
+
 # ALINHAMENTOS DE STRING:
 fruta = 'Abacate'
 print(fruta)
@@ -113,6 +122,8 @@ print(fruta.center(20, '-')) # Centraliza a palavra Abacate. *FOI COLOCADO '-' P
 
 #________________________________________________________________________________________________________________
 
+# PREFIXOS E SUFIXOS:
+p = 'Bóson Treinamentos'
 
 
 
