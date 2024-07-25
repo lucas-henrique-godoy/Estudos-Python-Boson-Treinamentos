@@ -124,6 +124,24 @@ print(fruta.center(20, '-')) # Centraliza a palavra Abacate. *FOI COLOCADO '-' P
 
 # PREFIXOS E SUFIXOS:
 p = 'Bóson Treinamentos'
+print(p.startswith('Bó')) # Verifica se um caractere expecífico esta no inicio e retorna como resposta um booleano.
+print(p.endswith('s')) # Verifica se um caractere expecífico esta no fim e retorna como resposta um booleano.
+
+#________________________________________________________________________________________________________________
+
+# Docstrings: São strings literais no código fonte que é usado para documentar trechos expecíficos do código como módulo, classe, função. Não são simples comentários, mas um texto que pode ter várias linhas para explicar a função geral de um item maior de dentro de um código.
+
+'''
+Docstring é uma espécie de codumentação que podemos inserir dentro de um módulo, função ou classe no Python,entre outros locais.
+    Respeita deslocamneto do etxto e é multilinhas. Não deve ser usada como um simples comentário, para isso existem os comentários.
+'''
+
+# Atribuir uma Docstring à uma variável:
+texto = '''
+Docstring é uma espécie de codumentação que podemos inserir dentro de um módulo, função ou classe no Python,entre outros locais.
+    Respeita deslocamneto do etxto e é multilinhas. Não deve ser usada como um simples comentário, para isso existem os comentários.
+'''
+print(texto)
 
 
 
