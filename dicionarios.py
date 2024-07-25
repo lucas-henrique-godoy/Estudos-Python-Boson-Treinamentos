@@ -1,0 +1,1 @@
+# Dicionários: Permitem armazenar dados em pares chave valor. São similares à arrays associativos que existem em outras linguagens ou hach maps.
