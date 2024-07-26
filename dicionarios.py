@@ -61,7 +61,9 @@ print(elemento)
 #________________________________________________________________________________________________________
 
 
-# Retorna os itens do dicionário no formato dict_items. Na forma de uma lista de tuplas de pares chave valor. Possui colchetes indicando que todo o conteúdo é uma lista e  cada item esta dentro de uma tupla indicado por parenteses.
+# Retorna os itens do dicionário no formato dict_items. Na forma de uma lista de tuplas de pares chave valor. 
+# Possui colchetes indicando que todo o conteúdo é uma lista e  cada item esta dentro de uma tupla indicado por parenteses.
+# EXEMPLO DO RETORNO: dict_items([('Z', 3), ('nome', 'Lítio'), ('grupo', 'Metais Alcalinos'), ('densidade', 0.534), ('periodo', 1)])
 print(elemento.items())
 for i in elemento.items():
     print(i)
