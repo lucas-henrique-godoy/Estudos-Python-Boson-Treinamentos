@@ -22,21 +22,23 @@ print(f'Densidade: {elemento['densidade']}.')
 #________________________________________________________________________________________________________
 
 # Verificando qual o tamanho do dicionário:
-print(f'O dicionário possui: {len(elemento)} elementos.')
+print(f'O dicionário possui: {len(elemento)} elementos.') # mostra a quantidade de pares chave valor
 
 #________________________________________________________________________________________________________
-
 # Atualizar uma entrada
-# 
+
 # Mudando no dicionário o valor da chave 'grupo' de 'Metais Alcalinos' para 'Alcalinos'
 #elemento['grupo'] = 'Alcalinos'
 #print(elemento)
+# - Se eu colocar o nome de uma chave que existe e atribuir um valor, o valor é alterado.
+
 
 #________________________________________________________________________________________________________
 
 # Adicionando uma entrada(criando uma nova chave) / Periodo foi criado
 elemento['periodo'] = 1
 print(elemento)
+# - Se eu colocar o nome de uma chave que não exista e atribuir um valor, a chave será criada/ inserida nesse dicionário.
 
 #________________________________________________________________________________________________________
 
