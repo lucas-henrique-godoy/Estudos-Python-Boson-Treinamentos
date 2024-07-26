@@ -698,7 +698,86 @@ OU SEJA: Os Dicionários Permitem armazenar dados em pares chave valor. São sim
 - Se eu colocar o nome de uma chave que não exista e atribuir um valor, a chave será criada/ inserida nesse dicionário.
 _______________________________________________________________________________________________________________________________________________________________________
 
+- SETS: Em Python, conjuntos (ou "sets") são uma estrutura de dados muito útil que permite armazenar múltiplos itens sem duplicados. Vamos explorar os principais aspectos dos sets em Python.
 
+1. Criação de Sets
+Você pode criar um set em Python de várias maneiras:
+
+Usando chaves {}:
+
+meu_set = {1, 2, 3, 4}
+Usando a função set():
+
+meu_set = set([1, 2, 3, 4])
+Note que ao criar um set, se você usar uma lista ou outra estrutura iterável, os duplicados serão automaticamente removidos. Além disso, um set vazio deve ser criado usando set(), pois {} cria um dicionário vazio.
+
+2. Propriedades dos Sets
+Elementos Únicos: Um set não pode ter elementos duplicados. Se você tentar adicionar um elemento que já existe, ele não será adicionado novamente.
+
+Não Ordenados: Os sets não mantêm a ordem dos elementos. Portanto, não é possível acessar os elementos por índice.
+
+Mutáveis: Você pode adicionar e remover elementos de um set, mas os elementos individuais devem ser imutáveis (tipos como int, float, str, e tuple são imutáveis).
+
+3. Operações Comuns com Sets
+Adicionar e Remover Elementos
+Adicionar Elemento:
+
+
+meu_set.add(5)
+Remover Elemento:
+
+meu_set.remove(3)  # Lança um KeyError se o elemento não estiver presente
+meu_set.discard(3) # Não lança um erro se o elemento não estiver presente
+Limpar Conjunto:
+
+meu_set.clear()  # Remove todos os elementos
+Métodos de Conjunto
+Comprimento do Set:
+
+len(meu_set)
+União:
+
+set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+uniao = set1 | set2  # ou set1.union(set2)
+Interseção:
+
+interseccao = set1 & set2  # ou set1.intersection(set2)
+Diferença:
+
+diferenca = set1 - set2  # ou set1.difference(set2)
+Diferença Simétrica:
+
+dif_simetrica = set1 ^ set2  # ou set1.symmetric_difference(set2)
+4. Exemplos Práticos
+Aqui estão alguns exemplos para ilustrar como trabalhar com sets em Python:
+
+# Criando sets
+set1 = {1, 2, 3, 4}
+set2 = {3, 4, 5, 6}
+
+# Adicionando e removendo elementos
+set1.add(7)
+set1.discard(2)  # Remove 2, se existir
+
+# Operações com sets
+uniao = set1 | set2
+print("União:", uniao)  # Saída: {1, 3, 4, 5, 6, 7}
+
+interseccao = set1 & set2
+print("Interseção:", interseccao)  # Saída: {3, 4}
+
+diferenca = set1 - set2
+print("Diferença:", diferenca)  # Saída: {1, 7}
+
+dif_simetrica = set1 ^ set2
+print("Diferença Simétrica:", dif_simetrica)  # Saída: {1, 5, 6, 7}
+5. Compreensão de Sets
+Você pode usar uma compreensão de set para criar sets de forma concisa:
+
+quadrados = {x**2 for x in range(10)}
+print(quadrados)  # Saída: {0, 1, 4, 9, 16, 25, 36, 49, 64, 81}
+Os sets são muito úteis quando você precisa garantir a unicidade dos elementos ou quando precisa realizar operações matemáticas rápidas em grupos de dados. Eles são especialmente eficientes para verificar a presença de elementos e para realizar operações de conjunto.
 
 
 
