@@ -43,12 +43,12 @@ print(elemento)
 #________________________________________________________________________________________________________
 
 # Exclusão de tens em dicionários / Periodo foi apagado
-#del elemento['periodo']
+#del elemento['periodo'] ALÉM DA CHAVE O VALOR TAMBÉM É REMOVIDO.
 #print(elemento)
 
 #________________________________________________________________________________________________________
 
-# Exclusão de todo o conteúdo do dicionário mas não do dicionário em si
+# Exclusão de todo o conteúdo dentro  do dicionário mas não do dicionário em si
 #elemento.clear()
 #print(elemento)
 
