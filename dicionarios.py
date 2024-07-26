@@ -1,6 +1,7 @@
 # Dicionários: Permitem armazenar dados em pares chave valor. São similares à arrays associativos que existem em outras linguagens ou hach maps. Não permitem itens duplicados, masa os itens podem ser de qualquer tipo.
 #  A chave é uma string que da acesso a um valor armazenado.
-# Dentro do dicionário não  pode ter mais de 1 valor para a mesma chave, ou seja chaves repetidas, as chaves são imutáveis. Podemos usar string, valor numérico, ou até mesmo tuplas como chave, mas não itens que sejam mutáveis como as listas. Podemos somente fazer alterações em um valor associado a uma chave, e não alterar a chave em si.
+# Dentro do dicionário não  pode ter mais de 1 valor para a mesma chave, ou seja chaves repetidas, as chaves são imutáveis. Podemos usar string, valor numérico, ou até mesmo tuplas como chave, mas não itens que sejam mutáveis como as listas.
+#  Podemos somente fazer alterações em um valor associado a uma chave, e não alterar a chave em si.
 # - Se eu colocar o nome de uma chave que existe e atribuir um valor, o valor é alterado.
 # - Se eu colocar o nome de uma chave que não exista e atribuir um valor, a chave será criada/ inserida nesse dicionário.
 
