@@ -28,8 +28,8 @@ print(f'O dicionário possui: {len(elemento)} elementos.') # mostra a quantidade
 # Atualizar uma entrada
 
 # Mudando no dicionário o valor da chave 'grupo' de 'Metais Alcalinos' para 'Alcalinos'
-#elemento['grupo'] = 'Alcalinos'
-#print(elemento)
+elemento['grupo'] = 'Alcalinos'
+print(elemento)
 # - Se eu colocar o nome de uma chave que existe e atribuir um valor, o valor é alterado.
 
 
@@ -43,20 +43,20 @@ print(elemento)
 #________________________________________________________________________________________________________
 
 # Exclusão de tens em dicionários / Periodo foi apagado
-#del elemento['periodo'] ALÉM DA CHAVE O VALOR TAMBÉM É REMOVIDO.
+del elemento['periodo'] # ALÉM DA CHAVE, O VALOR TAMBÉM É REMOVIDO.
 #print(elemento)
 
 #________________________________________________________________________________________________________
 
 # Exclusão de todo o conteúdo dentro  do dicionário mas não do dicionário em si
-#elemento.clear()
-#print(elemento)
+elemento.clear()
+print(elemento)
 
 #________________________________________________________________________________________________________
 
 # Exclusão do dicionário por completo
-#del elemento
-#print(elemento)
+del elemento
+print(elemento)
 
 #________________________________________________________________________________________________________
 
@@ -96,15 +96,17 @@ for i in elemento.values(): # Itera e mostra os valores do dicionário um em cim
 
 #_______________________________________________________________________________________________________________
 
-# Desempacotando as chaves valor simultaneamente.
+# DESENPACOTANDO AS CHAVES VALOR SIMULTANEAMENTE.
 # Retorna os itens como uma "tabela", "pequeno resumo", "pequeno relatório". 
 
-# Exemplo:
+# Exemplo do retorno:
 # Z: 3
 # nome: Lítio
 # grupo: Metais Alcalinos
 
-for i, j in elemento.items(): # Iterando sobre os itens do dicionário(chave e valor). Onde i recebe a chave e o j recebe o valor.
+# Iterando sobre os itens do dicionário(chave e valor). 
+# Onde i recebe a chave e o j recebe o valor.
+for i, j in elemento.items(): 
     print(f'{i}: {j}')
 
 
