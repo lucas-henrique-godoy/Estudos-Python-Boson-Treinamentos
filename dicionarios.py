@@ -67,7 +67,7 @@ print(elemento.items())
 # RETORNO: dict_items([('Z', 3), ('nome', 'Lítio'), ('grupo', 'Metais Alcalinos'), ('densidade', 0.534), ('periodo', 1)])
 
 
-# Itera e mostra as tuplas separadas
+# Itera e mostra as tuplas separadas uma em cada linha.
 for i in elemento.items():   
     print(i)
 
@@ -81,7 +81,7 @@ for i in elemento.items():
 #________________________________________________________________________________________________________
     # FORMAS DE MOSTRAR SOMENTE AS CHAVES DE UM DICIONÁRIO
 
-print(elemento.keys()) # Mostra somente as chaves do dicionário dentro de uma dict_keys - Lista de tuplas.
+print(elemento.keys()) # Mostra somente uma lista com as chaves do dicionário dentro de uma dict_keys - Lista de tuplas.
 
 for i in elemento.keys(): # Itera e mostra as chaves do dicionário uma em cima da outra.
     print(i)
@@ -89,7 +89,7 @@ for i in elemento.keys(): # Itera e mostra as chaves do dicionário uma em cima 
 #_____________________________________________________________________________________________________________
     # FORMAS DE MOSTRAR SOMENTE OS VALORES DE UM DICIONÁRIO
 
-print(elemento.values())  # Mostra somente os valores do dicionário dentro de uma dict_values - Lista de tuplas.
+print(elemento.values())  # Mostra somente uma lista com os valores do dicionário dentro de uma dict_values - Lista de tuplas.
 
 for i in elemento.values(): # Itera e mostra os valores do dicionário um em cima do outro.
     print(i) 
@@ -97,7 +97,9 @@ for i in elemento.values(): # Itera e mostra os valores do dicionário um em cim
 #_______________________________________________________________________________________________________________
 
 # Desempacotando as chaves valor simultaneamente.
-# Retorna os itens como uma "tabela", "pequeno resumo", "pequeno relatório". Exemplo:
+# Retorna os itens como uma "tabela", "pequeno resumo", "pequeno relatório". 
+
+# Exemplo:
 # Z: 3
 # nome: Lítio
 # grupo: Metais Alcalinos
