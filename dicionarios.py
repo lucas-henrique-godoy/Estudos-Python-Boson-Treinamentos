@@ -105,7 +105,7 @@ for i in elemento.values(): # Itera e mostra os valores do dicionário um em cim
 # grupo: Metais Alcalinos
 
 # Iterando sobre os itens do dicionário(chave e valor). 
-# Onde i recebe a chave e o j recebe o valor.
+# Onde i recebe a chave e o j recebe o valor relacionado a chave..
 for i, j in elemento.items(): 
     print(f'{i}: {j}')
 
