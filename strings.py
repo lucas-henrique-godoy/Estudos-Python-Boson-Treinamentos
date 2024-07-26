@@ -12,7 +12,7 @@ print(nome + ' com ' + instrutor) # Concatenando strings
 
 # EXEMPLO 2
 frase = 'Vamos aprender python hoje.'
-palavras = frase.split() # Divide a string em partes, separadas por espaço por padrao criando assim uma lista de strings. Todas as palavras separadas por espaço se transformou em um item de uma lista, que agora podem ser acessados individualmente inclusive com [].
+palavras = frase.split() # Divide a string em partes, separadas por espaço por padrao criando assim uma lista de strings. Todas as palavras separadas por espaço se transformaram em um item de uma lista, que agora podem ser acessados individualmente inclusive com [].
 print(palavras[1])
 #________________________________________________________________________________________________________________
 
