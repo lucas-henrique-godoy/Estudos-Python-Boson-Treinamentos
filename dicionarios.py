@@ -61,7 +61,7 @@ print(elemento)
 #________________________________________________________________________________________________________
 
 
-# Retorna os itens do dicionário no formato dict_items. Na foma de uma lista de tuplas de pares chave valor. Possui colchetes indicando que todo o conteúdo é uma lista e  cada item esta dentro de uma tupla indicado por parenteses.
+# Retorna os itens do dicionário no formato dict_items. Na forma de uma lista de tuplas de pares chave valor. Possui colchetes indicando que todo o conteúdo é uma lista e  cada item esta dentro de uma tupla indicado por parenteses.
 print(elemento.items())
 for i in elemento.items():
     print(i)
