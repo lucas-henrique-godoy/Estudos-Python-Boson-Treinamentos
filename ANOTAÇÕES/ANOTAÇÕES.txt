@@ -778,6 +778,77 @@ Você pode usar uma compreensão de set para criar sets de forma concisa:
 quadrados = {x**2 for x in range(10)}
 print(quadrados)  # Saída: {0, 1, 4, 9, 16, 25, 36, 49, 64, 81}
 Os sets são muito úteis quando você precisa garantir a unicidade dos elementos ou quando precisa realizar operações matemáticas rápidas em grupos de dados. Eles são especialmente eficientes para verificar a presença de elementos e para realizar operações de conjunto.
+_______________________________________________________________________________________________________________________________________________________________________
+
+*** VIDEO QUE EXPLICA MELHOR O : __NAME__=='__MAIN__': https://youtu.be/F2BC9fwm3tI?si=QSeHFPh5T4NdEadr  ***
+_______________________________________________________________________________________________________________________________________________________________________
+
+__NAME__=='__MAIN__': A instrução if __name__ == '__main__': é uma construção comum em Python usada para controlar a execução de código. Ela ajuda a diferenciar quando um módulo está sendo executado diretamente como o script principal ou quando está sendo importado por outro módulo.
+
+Conceito Básico
+__name__ é uma variável especial em Python que é automaticamente definida pelo interpretador.
+Se um módulo é executado diretamente como o script principal, o valor de __name__ é definido como '__main__'.
+Se um módulo é importado por outro módulo, o valor de __name__ é o nome do módulo.
+Propósito
+O propósito de usar if __name__ == '__main__': é garantir que certas partes do código sejam executadas apenas quando o módulo é executado diretamente, e não quando é importado. Isso é útil para incluir testes, exemplos ou código de inicialização que não deve ser executado quando o módulo é utilizado como uma biblioteca.
+
+Exemplo Prático
+Vamos usar um exemplo prático para ilustrar o conceito.
+
+Código do Módulo: modulo_soma.py
+
+def soma(x, y):
+    return x + y
+
+# Este bloco será executado somente quando o módulo modulo_soma.py for executado diretamente, por exemplo, se você rodar este arquivo como um script.
+# Se modulo_soma.py for importado por outro arquivo, o código dentro deste bloco não será executado. 
+# Isso previne que os prints abaixo apareçam no terminal quando o módulo for importado, evitando possíveis efeitos indesejados.
+
+if __name__ == '__main__': 
+    # Exemplos de testes para verificar se a função soma está funcionando corretamente.
+    # Estes prints mostram o resultado da função soma com diferentes entradas para validação.
+    print(soma(10, 20)) # Imprime o resultado da soma de 10 e 20, que é 30.
+    print(soma(10, 30)) # Imprime o resultado da soma de 10 e 30, que é 40.
+    print(soma(10, 40)) # Imprime o resultado da soma de 10 e 40, que é 50.
+Código de Importação: app.py
+python
+Copiar código
+# Quando este arquivo (app.py) é executado, somente o código neste arquivo será executado.
+# O código dentro do bloco if __name__ == '__main__': no módulo importado (modulo_soma.py) não será executado.
+# Se o bloco if __name__ == '__main__': não estivesse presente em modulo_soma.py, o código fora de funções ou classes poderia ser executado também,
+# o que poderia causar efeitos indesejados ao importar o módulo.
+
+from modulo_soma import soma 
+
+a = 10
+b = 50
+print(soma(a, b))  # Imprime o resultado da soma de a e b, que é 60.
+Explicação Completa
+Execução Direta vs. Importação
+
+Quando Executado Diretamente:
+
+Quando modulo_soma.py é executado diretamente (por exemplo, com python modulo_soma.py), o valor de __name__ é '__main__'.
+O bloco de código sob if __name__ == '__main__': será executado. Nesse caso, ele imprime os resultados das chamadas à função soma com diferentes entradas.
+Quando Importado:
+
+Quando modulo_soma.py é importado por outro módulo, como app.py, o valor de __name__ é 'modulo_soma'.
+O bloco de código sob if __name__ == '__main__': não é executado. Apenas a função soma é importada e usada no app.py.
+Benefícios
+
+Evita Execução Não Desejada: O código dentro do bloco if __name__ == '__main__': não interfere quando o módulo é importado. Isso evita a execução de testes ou exemplos indesejados no contexto de outro módulo.
+Facilita Testes e Exemplos: Permite incluir código para testar ou demonstrar a funcionalidade do módulo sem afetar outros scripts que importam o módulo.
+Código de Teste e Validação
+
+No Módulo (modulo_soma.py):
+Inclui exemplos de testes que validam o comportamento da função soma. Estes exemplos são executados somente quando o módulo é executado diretamente, não quando é importado.
+No Arquivo de Importação (app.py):
+Apenas importa a função soma e a usa. O código de teste no modulo_soma.py não é executado, garantindo que o comportamento do código importado seja previsível e controlado.
+Resumo
+A instrução if __name__ == '__main__': é uma prática recomendada em Python para garantir que certas partes do código sejam executadas apenas quando um módulo é executado diretamente. Isso ajuda a evitar a execução não intencional de código quando o módulo é importado e facilita a manutenção e reutilização do código.
+
+Com esse entendimento e exemplos, você pode estruturar seus módulos Python de forma que comportem-se de maneira previsível e organizada, tanto ao serem executados diretamente quanto ao serem importados por outros módulos.
+
 
 
 
