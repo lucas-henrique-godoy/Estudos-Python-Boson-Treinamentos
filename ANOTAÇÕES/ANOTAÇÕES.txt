@@ -848,6 +848,77 @@ Resumo
 A instrução if __name__ == '__main__': é uma prática recomendada em Python para garantir que certas partes do código sejam executadas apenas quando um módulo é executado diretamente. Isso ajuda a evitar a execução não intencional de código quando o módulo é importado e facilita a manutenção e reutilização do código.
 
 Com esse entendimento e exemplos, você pode estruturar seus módulos Python de forma que comportem-se de maneira previsível e organizada, tanto ao serem executados diretamente quanto ao serem importados por outros módulos.
+_______________________________________________________________________________________________________________________________________________________________________
+
+1. Parâmetros Opcionais com Valores Padrão: Em Python, você pode definir parâmetros opcionais em funções para tornar suas funções mais flexíveis. Os parâmetros opcionais permitem que você forneça valores padrão para argumentos, de modo que a função possa ser chamada com menos argumentos do que os definidos. Vamos explorar como isso funciona com exemplos. Você pode definir valores padrão para parâmetros ao definir a função. Se um argumento não for fornecido ao chamar a função, o valor padrão será usado.
+
+Exemplo
+def saudacao(nome="Visitante", saudacao="Olá"):
+    print(f"{saudacao}, {nome}!")
+
+# Chamadas à função
+saudacao()                   # Usará os valores padrão: "Olá, Visitante!"
+saudacao("Maria")            # Usará o valor padrão para "saudacao": "Olá, Maria!"
+saudacao("João", "Bom dia") # Usará os valores fornecidos: "Bom dia, João!"
+2. Ordem dos Parâmetros
+Os parâmetros opcionais devem sempre ser definidos após os parâmetros obrigatórios. Você não pode definir um parâmetro opcional antes de um parâmetro obrigatório.
+
+Exemplo
+
+# Correto
+def mostrar_info(nome, idade=30):
+    print(f"Nome: {nome}, Idade: {idade}")
+
+# Incorreto: causará um erro de sintaxe
+# def mostrar_info(idade=30, nome):
+#     print(f"Nome: {nome}, Idade: {idade}")
+3. Uso de *args e **kwargs
+Além dos parâmetros opcionais com valores padrão, Python permite o uso de *args e **kwargs para passar um número variável de argumentos para uma função.
+
+*args: Permite passar um número variável de argumentos posicionais.
+**kwargs: Permite passar um número variável de argumentos nomeados.
+Exemplo com *args e **kwargs
+
+def funcao_varios_args(*args, **kwargs):
+    print("Argumentos posicionais:", args)
+    print("Argumentos nomeados:", kwargs)
+
+# Chamadas à função
+funcao_varios_args(1, 2, 3, a=4, b=5)
+# Saída:
+# Argumentos posicionais: (1, 2, 3)
+# Argumentos nomeados: {'a': 4, 'b': 5}
+4. Parâmetros Opcionais e Imutabilidade
+Lembre-se de que usar tipos mutáveis, como listas e dicionários, como valores padrão pode causar comportamento inesperado. Isso ocorre porque o valor padrão é avaliado apenas uma vez na definição da função.
+
+Exemplo de Comportamento Indesejado
+
+def adicionar_item(item, lista=[]):
+    lista.append(item)
+    return lista
+
+# Chamadas à função
+print(adicionar_item(1)) # Saída: [1]
+print(adicionar_item(2)) # Saída: [1, 2] - Lista compartilha o mesmo objeto padrão
+Para evitar esse problema, use None como valor padrão e crie o objeto dentro da função se necessário.
+
+Correção
+
+def adicionar_item(item, lista=None):
+    if lista is None:
+        lista = []
+    lista.append(item)
+    return lista
+
+# Chamadas à função
+print(adicionar_item(1)) # Saída: [1]
+print(adicionar_item(2)) # Saída: [2] - Lista é nova a cada chamada
+Resumo
+Parâmetros Opcionais: Definidos com valores padrão e aparecem após parâmetros obrigatórios.
+*args: Para argumentos posicionais variáveis.
+**kwargs: Para argumentos nomeados variáveis.
+Cuidado com Tipos Mutáveis: Evite usar listas ou dicionários como valores padrão diretamente.
+Esses conceitos permitem criar funções mais flexíveis e adaptáveis a diferentes casos de uso.
 
 
 
