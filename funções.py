@@ -112,7 +112,7 @@
         # Imprime o valor de cada elemento na lista `resultados`, que são os quadrados dos valores originais.
 #        print(g)
 #_____________________________________________________________________________________________________________________
-# PARÂMETROS OPCIONAIS
+# EXEMPLO 1 DE FUNÇÕES COM PARÂMETROS OPCIONAIS
 # def contar(num=11, caractere='+'):
 #     for i in range(1, num):
 #         print(caractere)
@@ -120,15 +120,36 @@
 #if __name__== '__main__': # Verifica se o módulo está sendo executado diretamente. # Se o módulo for executado diretamente (não importado), `__name__` será igual a `'__main__'`.
     #contar(num=8, caractere='@') # mudando os valores padrão da função contar para exibir o caractere @ ao inves do + e mudando a quantidade de exibição de 11 para 8.
     #contar(8, '@') - Segunda maneira colocando apenas os valores nas ordens.
+
+
+# OBS: Não e necessario usar os mesmos nomes das variaveis quando se cria e quando chamamos uma função, porem neste exemplo
+# estamos trabalhando com argumentos nomeados, ai devemos usar os mesmos nomes. EX: num e caractere.
 #_____________________________________________________________________________________________________________________
 
-x =5 
+
+
+# EXEMPLO 2 DE FUNÇÕES COM PARÂMETROS OPCIONAIS
+
+# Essa função verifica se o usuário passar apenas 2 valores é feito a multiplicação desses valores,mas se o
+# usuário passar os 3 valores é feita a soma dos 3 valores. Ou seja o comportamento da função muda de acordo
+# com o número de argumentos que são passados. Agora podemos criar funções que podem receber números diferentes
+# de argumentos e ter comportamentos diferentes, de acordo com esses argumentos passados. 
+# OBS:Esse conceito em OOP se chama polimorfismo.
+x = 5 
 y = 6
 z = 3
 
-def soma_mult(a, b , c = 0):
+def soma_mult(a, b , c = 0): 
+    if c == 0:
+        return a * b
+    else:
+        return a + b + c    
 
-    
+if __name__== '__main__':
+    res1 = soma_mult(x,y) # passando apenas 2 valores é feita a multiplicação
+    res2 = soma_mult(x,y,z) # passando os 3 valores é feita a soma
+    print(res1)
+    print(res2)
   
 
     
