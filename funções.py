@@ -87,31 +87,50 @@
 # EXEMPLO 5 - Função para calcular valores de quadrados:
 
 # Define a função `quadrado` que recebe uma lista de valores e retorna uma lista com os quadrados desses valores.
-def quadrado(val):
+#def quadrado(val):
     # Cria uma lista vazia para armazenar os quadrados dos valores.
-    quadrados = []
+#    quadrados = []
     
     # Itera sobre cada valor na lista `val`.
-    for x in val:
+#    for x in val:
         # Adiciona o quadrado do valor `x` à lista `quadrados`.
-        quadrados.append(x ** 2)
+#        quadrados.append(x ** 2)
     
     # Retorna a lista `quadrados` com os valores quadrados.
-    return quadrados
+#    return quadrados
 
-# Verifica se o módulo está sendo executado diretamente.
-# Se o módulo for executado diretamente (não importado), `__name__` será igual a `'__main__'`.
-if __name__ == '__main__':
-    # Define uma lista de valores.
-    valores = [2, 5, 7, 9, 12]
+#_____________________________________________________________________________________________________________________
+# FUNÇÃO QUE MOSTRA UMA LISTA COM O QUADRADO DOS NUMEROS USANDO O CALCULO FEITO PELA ↑↑↑ função quadrado() ↑↑↑
+# Define uma lista de valores.
+#    valores = [2, 5, 7, 9, 12]
     
     # Chama a função `quadrado` com a lista `valores` e armazena o resultado na variável `resultados`.
-    resultados = quadrado(valores)
+#    resultados = quadrado(valores)
     
     # Itera sobre cada valor na lista `resultados`.
-    for g in resultados:
+#    for g in resultados:
         # Imprime o valor de cada elemento na lista `resultados`, que são os quadrados dos valores originais.
-        print(g)
+#        print(g)
+#_____________________________________________________________________________________________________________________
+# PARÂMETROS OPCIONAIS
+# def contar(num=11, caractere='+'):
+#     for i in range(1, num):
+#         print(caractere)
 
+#if __name__== '__main__': # Verifica se o módulo está sendo executado diretamente. # Se o módulo for executado diretamente (não importado), `__name__` será igual a `'__main__'`.
+    #contar(num=8, caractere='@') # mudando os valores padrão da função contar para exibir o caractere @ ao inves do + e mudando a quantidade de exibição de 11 para 8.
+    #contar(8, '@') - Segunda maneira colocando apenas os valores nas ordens.
+#_____________________________________________________________________________________________________________________
+
+x =5 
+y = 6
+z = 3
+
+def soma_mult(a, b , c = 0):
+
+    
+  
+
+    
     
 
