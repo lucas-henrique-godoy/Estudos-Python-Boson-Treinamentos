@@ -919,10 +919,13 @@ Parâmetros Opcionais: Definidos com valores padrão e aparecem após parâmetro
 **kwargs: Para argumentos nomeados variáveis.
 Cuidado com Tipos Mutáveis: Evite usar listas ou dicionários como valores padrão diretamente.
 Esses conceitos permitem criar funções mais flexíveis e adaptáveis a diferentes casos de uso.
+_______________________________________________________________________________________________________________________________________________________________________
 
+ESCOPO: Indica a visibilidade de uma variável dentro do código, ou seja, dentro desse código, onde a variável é visível e acessível.
+ Escopo Global e Local
+- LOCAL: É geralmente criada dentro de uma função/rotina e ela existe somente dentro dessa função onde foi declarada. Sendo inicializada toda vez que a função é chamada, e não conseguimos acessar essa variável de fora da função.
 
-
-
+- GLOBAL: É declarada fora das funções, e pode ser acessada em toda a parte do código, por todas as rotinas que existem no código ou módulo onde ela é definida. Também é possível acessar variáveis globais em outros modulos se eles forem importados para dentro do script atual. Geralmente usamos variáveis globais para armazenar valores constantes no programa, acessíveis para todas as funções. Devemos tomar cuidado ao trabalhar com variáveis globais, e sempre que possível usarmos apenas variáveis locais.
 
 
 
