@@ -1238,5 +1238,89 @@ if __name__ == '__main__':
     finally:
         # Esta parte sempre será executada, independentemente de sucesso ou erro
         print(f'Cálculo finalizado!')
+_______________________________________________________________________________________________________________________________________________________________________
+
+RECURSIVIDADE EXPLICAÇÃO CHATGPT: Recursividade é um conceito poderoso na programação onde uma função se chama a si mesma para resolver um problema. Vamos explorar como a recursividade funciona em Python, começando pelos conceitos básicos e avançando para exemplos práticos.
+
+Conceitos Básicos de Recursividade
+Definição de Recursividade:
+
+Uma função recursiva é aquela que se chama diretamente ou indiretamente dentro de sua própria definição.
+Caso Base:
+
+É a condição que encerra a recursão. Sem um caso base, a função continuaria a se chamar indefinidamente, o que levaria a um erro de estouro de pilha (stack overflow).
+Chamada Recursiva:
+
+É a parte da função onde ela se chama com um valor diferente do original, geralmente mais próximo do caso base.
+Exemplo Simples: Fatorial
+Vamos usar a função fatorial como exemplo, pois é um clássico problema que pode ser resolvido de forma recursiva.
+
+Código do Fatorial:
+python
+Copiar código
+def fatorial(n):
+    # Caso base: fatorial de 0 ou 1 é 1
+    if n == 0 or n == 1:
+        return 1
+    else:
+        # Chamada recursiva: n * fatorial(n - 1)
+        return n * fatorial(n - 1)
+Explicação:
+
+Caso Base:
+
+Quando n é 0 ou 1, a função retorna 1. Isso para a recursão, pois sabemos que o fatorial de 0 e 1 é 1.
+Chamada Recursiva:
+
+Quando n é maior que 1, a função retorna n * fatorial(n - 1). Isso reduz o problema, já que fatorial(n - 1) calcula o fatorial de um número menor. A função continua a se chamar com valores cada vez menores até atingir o caso base.
+Como a Recursão Funciona
+Chamada Inicial:
+
+Quando você chama fatorial(5), a função verifica se n é 0 ou 1. Não é, então faz uma chamada recursiva com n - 1.
+Execução das Chamadas:
+
+fatorial(5) chama fatorial(4).
+fatorial(4) chama fatorial(3).
+E assim por diante, até fatorial(1).
+Chegada ao Caso Base:
+
+Quando a função chega a fatorial(1), ela retorna 1, que é o caso base.
+Desenrolar das Chamadas:
+
+Após atingir o caso base, a função começa a retornar dos níveis mais profundos:
+fatorial(2) calcula 2 * 1 e retorna 2.
+fatorial(3) calcula 3 * 2 e retorna 6.
+E assim por diante até retornar o resultado final para fatorial(5).
+Exemplos de Problemas Recursivos
+Sequência de Fibonacci:
+
+A sequência de Fibonacci é um exemplo clássico de problema que pode ser resolvido recursivamente:
+
+python
+Copiar código
+def fibonacci(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacci(n - 1) + fibonacci(n - 2)
+Busca em Árvore:
+
+Problemas que envolvem árvores (como a busca em uma árvore binária) também são comumente resolvidos usando recursividade.
+Divisão e Conquista:
+
+Algoritmos de divisão e conquista, como o Merge Sort e Quick Sort, frequentemente utilizam recursão para dividir problemas em subproblemas menores.
+Vantagens e Desvantagens
+Vantagens:
+
+Simplicidade: Muitas vezes, a solução recursiva é mais fácil de entender e implementar para problemas que têm uma estrutura naturalmente recursiva.
+Desvantagens:
+
+Uso de Memória: Cada chamada recursiva consome memória adicional na pilha, o que pode levar a problemas de desempenho ou estouro de pilha para profundidades muito grandes.
+Desempenho: Algumas soluções recursivas podem ser menos eficientes do que suas contrapartes iterativas devido ao overhead de chamadas de função.
+Conclusão
+A recursividade é uma técnica poderosa e elegante para resolver muitos problemas, especialmente aqueles que podem ser divididos em subproblemas menores de forma natural. No entanto, é importante garantir que a função recursiva tenha um caso base adequado e considerar as implicações de desempenho e uso de memória ao usar recursão.
+
 
 

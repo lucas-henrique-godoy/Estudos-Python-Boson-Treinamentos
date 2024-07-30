@@ -1,0 +1,1 @@
+# Funções lambda (anônimas) - Funções que não tem nome, e que podem ser criadas e usadas no mesmo momento. A gente não define uma função previamente para usar depois, você cria e usa na mesma hora
