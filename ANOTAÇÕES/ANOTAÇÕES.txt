@@ -1321,6 +1321,88 @@ Uso de Memória: Cada chamada recursiva consome memória adicional na pilha, o q
 Desempenho: Algumas soluções recursivas podem ser menos eficientes do que suas contrapartes iterativas devido ao overhead de chamadas de função.
 Conclusão
 A recursividade é uma técnica poderosa e elegante para resolver muitos problemas, especialmente aqueles que podem ser divididos em subproblemas menores de forma natural. No entanto, é importante garantir que a função recursiva tenha um caso base adequado e considerar as implicações de desempenho e uso de memória ao usar recursão.
+_______________________________________________________________________________________________________________________________________________________________________
+
+FUNÇÕES ESPECIAIS: FUNÇÕES LAMBDA
+
+Funções lambda em Python são funções anônimas (ou seja, funções sem um nome definido) que são criadas usando a palavra-chave lambda. Elas são úteis para criar funções pequenas e rápidas que são usadas uma vez ou em situações onde a definição de uma função tradicional seria excessiva.
+
+Sintaxe Básica
+A sintaxe de uma função lambda é:
+
+lambda argumentos: expressão
+lambda: A palavra-chave que indica a criação de uma função lambda.
+argumentos: Os parâmetros que a função lambda aceitará (se houver).
+expressão: A única expressão que a função lambda calcula e retorna.
+
+Exemplos
+Função Lambda Simples
+# Função lambda que soma dois números
+soma = lambda x, y: x + y
+
+# Usando a função lambda
+resultado = soma(5, 3)
+print(resultado)  # Saída: 8
+Neste exemplo, lambda x, y: x + y cria uma função que soma dois números. soma é uma variável que armazena essa função lambda, e soma(5, 3) retorna 8.
+
+Função Lambda sem Argumentos
+
+
+# Função lambda que retorna uma string fixa
+saudacao = lambda: "Olá, mundo!"
+
+# Usando a função lambda
+print(saudacao())  # Saída: Olá, mundo!
+Aqui, lambda: "Olá, mundo!" é uma função sem argumentos que retorna a string "Olá, mundo!".
+
+Função Lambda com Operações Condicionais
+
+
+# Função lambda que verifica se um número é par
+par_ou_impar = lambda x: "Par" if x % 2 == 0 else "Ímpar"
+
+# Usando a função lambda
+print(par_ou_impar(10))  # Saída: Par
+print(par_ou_impar(7))   # Saída: Ímpar
+Neste caso, lambda x: "Par" if x % 2 == 0 else "Ímpar" cria uma função que retorna "Par" se o número for par e "Ímpar" caso contrário.
+
+Usos Comuns
+Funções de Ordem Superior
+
+Funções lambda são frequentemente usadas como argumentos para funções de ordem superior, como map(), filter(), e sorted().
+
+map(): Aplica uma função a todos os itens de um iterável (como uma lista).
+
+
+numeros = [1, 2, 3, 4, 5]
+quadrados = map(lambda x: x**2, numeros)
+print(list(quadrados))  # Saída: [1, 4, 9, 16, 25]
+filter(): Filtra itens de um iterável com base em uma função de teste.
+
+
+numeros = [1, 2, 3, 4, 5]
+pares = filter(lambda x: x % 2 == 0, numeros)
+print(list(pares))  # Saída: [2, 4]
+sorted(): Ordena um iterável com base em uma função de chave.
+
+pontos = [(1, 2), (3, 1), (2, 4)]
+pontos_ordenados = sorted(pontos, key=lambda p: p[1])
+print(pontos_ordenados)  # Saída: [(3, 1), (1, 2), (2, 4)]
+Funções Simples em Código Temporário
+
+Funções lambda são úteis para funções pequenas e descartáveis, especialmente quando você não precisa de uma função completa, mas apenas de uma operação rápida.
+
+Limitações das Funções Lambda
+Expressão Única: Funções lambda só podem conter uma expressão. Não é possível incluir várias instruções ou blocos de código como você faria em uma função tradicional.
+Legibilidade: Embora úteis para operações simples, funções lambda podem reduzir a legibilidade se usadas em excesso ou para operações complexas.
+Conclusão
+Funções lambda em Python oferecem uma maneira concisa e eficiente de definir funções pequenas e temporárias. Elas são particularmente úteis quando usadas como argumentos para funções de ordem superior e em situações onde uma definição de função completa seria excessiva. No entanto, para funções mais complexas ou quando a legibilidade é uma preocupação, é melhor optar por funções definidas com def.
+
+
+
+
+
+
 
 
 
