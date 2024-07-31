@@ -1397,6 +1397,91 @@ Expressão Única: Funções lambda só podem conter uma expressão. Não é pos
 Legibilidade: Embora úteis para operações simples, funções lambda podem reduzir a legibilidade se usadas em excesso ou para operações complexas.
 Conclusão
 Funções lambda em Python oferecem uma maneira concisa e eficiente de definir funções pequenas e temporárias. Elas são particularmente úteis quando usadas como argumentos para funções de ordem superior e em situações onde uma definição de função completa seria excessiva. No entanto, para funções mais complexas ou quando a legibilidade é uma preocupação, é melhor optar por funções definidas com def.
+_______________________________________________________________________________________________________________________________________________________________________
+
+- FUNÇÕES MAP: Função interna do python que permite aplicar uma outra função a cada elemento de um objeto iterável e retorna um objeto do tipo map contendo os resultados. É uma função que aplica funções e é muitas vezes usadas junto com funções lambda para criar funções mais poderosas, mas curtinhas.  
+
+A função map() em Python é uma função incorporada que permite aplicar uma função a todos os itens de um iterável (como uma lista, tupla, etc.) e retorna um iterador que produz os resultados. É uma maneira eficiente de processar e transformar coleções de dados.
+
+Sintaxe
+A sintaxe básica da função map() é:
+
+python
+Copiar código
+map(func, iterável)
+func: A função que será aplicada a cada item do iterável.
+iterável: O iterável (como uma lista, tupla, etc.) cujos itens serão processados pela função.
+Exemplo Básico
+Vamos ver um exemplo básico para entender como map() funciona:
+
+python
+Copiar código
+# Função que será aplicada a cada item
+def quadrado(x):
+    return x * x
+
+# Lista de números
+numeros = [1, 2, 3, 4, 5]
+
+# Aplicando a função quadrado a cada item da lista usando map
+resultado = map(quadrado, numeros)
+
+# Convertendo o resultado para uma lista e imprimindo
+print(list(resultado))
+Saída:
+
+csharp
+Copiar código
+[1, 4, 9, 16, 25]
+Explicação
+Definição da Função: quadrado é uma função simples que retorna o quadrado de um número.
+Uso de map(): map(quadrado, numeros) aplica a função quadrado a cada item da lista numeros.
+Conversão para Lista: map() retorna um iterador. Para ver o resultado, é necessário convertê-lo para uma lista (ou outro tipo de coleção).
+Usando lambda
+Você pode usar uma função anônima (lambda) com map() para simplificar o código:
+
+python
+Copiar código
+numeros = [1, 2, 3, 4, 5]
+resultado = map(lambda x: x * x, numeros)
+print(list(resultado))
+Isso produz o mesmo resultado que o exemplo anterior.
+
+Múltiplos Iteráveis
+A função map() também pode aceitar múltiplos iteráveis. A função fornecida deve aceitar um número de argumentos igual ao número de iteráveis.
+
+python
+Copiar código
+# Função que recebe dois argumentos
+def soma(a, b):
+    return a + b
+
+# Duas listas de números
+lista1 = [1, 2, 3]
+lista2 = [4, 5, 6]
+
+# Aplicando a função soma a pares de itens das duas listas
+resultado = map(soma, lista1, lista2)
+
+# Convertendo o resultado para uma lista e imprimindo
+print(list(resultado))
+Saída:
+
+csharp
+Copiar código
+[5, 7, 9]
+Considerações
+Desempenho: map() é eficiente porque usa um iterador e não cria uma lista completa de resultados de uma só vez.
+Mutabilidade: O iterador retornado por map() é um objeto que pode ser percorrido apenas uma vez. Se você precisar dos resultados mais de uma vez, converta-o em uma lista ou outro tipo de coleção.
+Comparação com List Comprehension
+O map() é semelhante a uma list comprehension. Por exemplo, o exemplo anterior pode ser reescrito usando list comprehension:
+
+python
+Copiar código
+resultado = [x * x for x in numeros]
+print(resultado)
+Ambas as abordagens são válidas, e a escolha entre map() e list comprehensions pode depender de preferência pessoal ou de casos específicos de uso.
+
 
 
 
