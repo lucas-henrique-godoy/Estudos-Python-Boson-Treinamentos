@@ -1406,16 +1406,14 @@ A função map() em Python é uma função incorporada que permite aplicar uma f
 Sintaxe
 A sintaxe básica da função map() é:
 
-python
-Copiar código
+
 map(func, iterável)
 func: A função que será aplicada a cada item do iterável.
 iterável: O iterável (como uma lista, tupla, etc.) cujos itens serão processados pela função.
 Exemplo Básico
 Vamos ver um exemplo básico para entender como map() funciona:
 
-python
-Copiar código
+
 # Função que será aplicada a cada item
 def quadrado(x):
     return x * x
@@ -1430,8 +1428,6 @@ resultado = map(quadrado, numeros)
 print(list(resultado))
 Saída:
 
-csharp
-Copiar código
 [1, 4, 9, 16, 25]
 Explicação
 Definição da Função: quadrado é uma função simples que retorna o quadrado de um número.
@@ -1440,8 +1436,7 @@ Conversão para Lista: map() retorna um iterador. Para ver o resultado, é neces
 Usando lambda
 Você pode usar uma função anônima (lambda) com map() para simplificar o código:
 
-python
-Copiar código
+
 numeros = [1, 2, 3, 4, 5]
 resultado = map(lambda x: x * x, numeros)
 print(list(resultado))
@@ -1450,8 +1445,6 @@ Isso produz o mesmo resultado que o exemplo anterior.
 Múltiplos Iteráveis
 A função map() também pode aceitar múltiplos iteráveis. A função fornecida deve aceitar um número de argumentos igual ao número de iteráveis.
 
-python
-Copiar código
 # Função que recebe dois argumentos
 def soma(a, b):
     return a + b
@@ -1467,8 +1460,6 @@ resultado = map(soma, lista1, lista2)
 print(list(resultado))
 Saída:
 
-csharp
-Copiar código
 [5, 7, 9]
 Considerações
 Desempenho: map() é eficiente porque usa um iterador e não cria uma lista completa de resultados de uma só vez.
@@ -1476,8 +1467,6 @@ Mutabilidade: O iterador retornado por map() é um objeto que pode ser percorrid
 Comparação com List Comprehension
 O map() é semelhante a uma list comprehension. Por exemplo, o exemplo anterior pode ser reescrito usando list comprehension:
 
-python
-Copiar código
 resultado = [x * x for x in numeros]
 print(resultado)
 Ambas as abordagens são válidas, e a escolha entre map() e list comprehensions pode depender de preferência pessoal ou de casos específicos de uso.
