@@ -1470,6 +1470,81 @@ O map() é semelhante a uma list comprehension. Por exemplo, o exemplo anterior 
 resultado = [x * x for x in numeros]
 print(resultado)
 Ambas as abordagens são válidas, e a escolha entre map() e list comprehensions pode depender de preferência pessoal ou de casos específicos de uso.
+_______________________________________________________________________________________________________________________________________________________________________
+
+ FUNÇÃO FILTER(): A função filter() em Python é usada para filtrar elementos de uma sequência (como uma lista ou uma tupla) com base em uma condição fornecida. Ela retorna um iterador que contém apenas os elementos da sequência original que atendem ao critério especificado.
+
+Sintaxe:
+
+filter(func, iterable)
+func: Uma função que recebe um único argumento e retorna True ou False. Essa função define a condição de filtragem.
+iterable: Uma sequência (como uma lista, tupla, ou qualquer objeto iterável) cujos elementos serão filtrados.
+Funcionamento
+Aplica a função func a cada item do iterable.
+Inclui no resultado apenas os itens para os quais func retorna True.
+Exemplo Básico
+Vamos usar filter() para selecionar apenas números pares de uma lista:
+
+
+# Função que verifica se um número é par
+def is_even(num):
+    return num % 2 == 0
+
+# Lista de números
+numbers = [1, 2, 3, 4, 5, 6]
+
+# Usando filter para obter apenas números pares
+even_numbers = filter(is_even, numbers)
+
+# Convertendo o resultado para uma lista e imprimindo
+print(list(even_numbers))  # Output: [2, 4, 6]
+Usando uma Função Lambda
+Você pode usar uma função lambda para simplificar a filtragem:
+
+
+# Lista de números
+numbers = [1, 2, 3, 4, 5, 6]
+
+# Usando filter com uma função lambda para obter apenas números pares
+even_numbers = filter(lambda x: x % 2 == 0, numbers)
+
+# Convertendo o resultado para uma lista e imprimindo
+print(list(even_numbers))  # Output: [2, 4, 6]
+Exemplo com Strings
+Vamos filtrar uma lista de strings para obter apenas aquelas com mais de 3 caracteres:
+
+
+# Função que verifica se uma string tem mais de 3 caracteres
+def longer_than_3(s):
+    return len(s) > 3
+
+# Lista de strings
+words = ["cat", "dog", "elephant", "rat"]
+
+# Usando filter para obter apenas palavras com mais de 3 caracteres
+long_words = filter(longer_than_3, words)
+
+# Convertendo o resultado para uma lista e imprimindo
+print(list(long_words))  # Output: ['elephant']
+Considerações
+Iterador: filter() retorna um iterador, o que significa que você precisa converter o resultado para uma lista (ou outra estrutura de dados) se quiser acessar todos os elementos de uma vez.
+Eficiência: A função filter() é eficiente porque não cria uma nova lista imediatamente. Ela gera os resultados sob demanda.
+Alternativa: List Comprehension
+Muitas vezes, você pode usar uma list comprehension como uma alternativa mais concisa ao filter():
+
+
+# Lista de números
+numbers = [1, 2, 3, 4, 5, 6]
+
+# Usando list comprehension para obter apenas números pares
+even_numbers = [x for x in numbers if x % 2 == 0]
+
+# Imprimindo o resultado
+print(even_numbers)  # Output: [2, 4, 6]
+Resumo
+filter() aplica uma função a cada item de um iterável e retorna um iterador com os itens que atendem à condição.
+Pode usar funções definidas ou lambdas para especificar a condição.
+O resultado é um iterador que você pode converter em uma lista ou outro tipo de coleção.
 
 
 
