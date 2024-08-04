@@ -1545,6 +1545,162 @@ Resumo
 filter() aplica uma função a cada item de um iterável e retorna um iterador com os itens que atendem à condição.
 Pode usar funções definidas ou lambdas para especificar a condição.
 O resultado é um iterador que você pode converter em uma lista ou outro tipo de coleção.
+_______________________________________________________________________________________________________________________________________________________________________
+
+FUNÇÃO REDUCE: A função reduce em Python é usada para aplicar uma função binária (ou seja, uma função que aceita dois argumentos) de forma cumulativa a uma sequência de elementos, reduzindo a sequência a um único valor.
+
+Importação
+Para usar reduce, você precisa importá-la do módulo functools:
+
+
+from functools import reduce
+Funcionamento
+reduce aplica a função especificada cumulativamente aos itens da sequência, da seguinte forma:
+
+Aplica a função aos dois primeiros itens da sequência.
+Em seguida, aplica a função ao resultado e ao próximo item da sequência.
+Repete o processo até que todos os itens da sequência tenham sido usados, resultando em um único valor.
+Sintaxe
+A sintaxe básica da função reduce é:
+
+
+reduce(function, iterable[, initializer])
+function: A função que será aplicada. Deve aceitar dois argumentos.
+iterable: A sequência de elementos sobre a qual a função será aplicada.
+initializer (opcional): Um valor inicial para a operação. Se fornecido, será usado como o primeiro argumento para a função, e o primeiro item da sequência será o segundo argumento.
+Exemplo
+Vamos considerar um exemplo básico onde queremos multiplicar todos os números em uma lista:
+
+
+from functools import reduce
+
+def multiply(x, y):
+    return x * y
+
+numbers = [1, 2, 3, 4, 5]
+
+result = reduce(multiply, numbers)
+print(result)  # Saída: 120
+Explicação:
+
+Multiplicação dos Dois Primeiros Elementos:
+
+multiply
+(
+1
+,
+2
+)
+=
+2
+multiply(1,2)=2
+Multiplicação do Resultado com o Próximo Elemento:
+
+multiply
+(
+2
+,
+3
+)
+=
+6
+multiply(2,3)=6
+Continue Aplicando a Função:
+
+multiply
+(
+6
+,
+4
+)
+=
+24
+multiply(6,4)=24
+
+multiply
+(
+24
+,
+5
+)
+=
+120
+multiply(24,5)=120
+Usando initializer
+Se você fornecer um valor inicial (initializer), ele será usado como o primeiro argumento e o primeiro item da sequência será o segundo argumento:
+
+python
+Copiar código
+result = reduce(multiply, numbers, 10)
+print(result)  # Saída: 1200
+Explicação:
+
+Começa com o initializer (10) e o primeiro item da lista (1):
+
+multiply
+(
+10
+,
+1
+)
+=
+10
+multiply(10,1)=10
+Continua com o próximo item:
+
+multiply
+(
+10
+,
+2
+)
+=
+20
+multiply(10,2)=20
+
+multiply
+(
+20
+,
+3
+)
+=
+60
+multiply(20,3)=60
+
+multiply
+(
+60
+,
+4
+)
+=
+240
+multiply(60,4)=240
+
+multiply
+(
+240
+,
+5
+)
+=
+1200
+multiply(240,5)=1200
+Uso Com Funções Lambda
+Você também pode usar funções lambda com reduce para maior concisão:
+
+
+from functools import reduce
+
+numbers = [1, 2, 3, 4, 5]
+result = reduce(lambda x, y: x * y, numbers)
+print(result)  # Saída: 120
+Conclusão
+A função reduce é poderosa para realizar operações cumulativas sobre sequências, especialmente quando você deseja reduzir uma lista a um único valor usando uma função binária.
+_______________________________________________________________________________________________________________________________________________________________________
+
+COMPREENSÕES DE LISTA: 
 
 
 
