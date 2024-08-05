@@ -4,7 +4,13 @@
 # Obejetos: Sao as ocorrências dessas classes, são essas classes carregadas na memória efetivamente existindo pra valer.
 
 # SINTAXE CLASSE:
-    # Atributos: São
-    # Métodos:
+    # Atributos: São propriedades das classes similares a variaveis, ou seja, estrutura que guardam valores.
+    # Métodos: São as funcionalidades ou ações que classe pode realizar ou sofrer(são similares a funções).
+
+class Veiculo:
+    def movimentar(self):
+        print(f'Sou um veícul e me desloco!')
+
+    
      
 
