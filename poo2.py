@@ -26,5 +26,5 @@ if __name__ == '__main__':
     meu_veiculo = Veiculo('GM', 'Cadillac Escalade')  # Cria uma instância da classe Veiculo com fabricante 'GM' e modelo 'Cadillac Escalade'
     meu_veiculo.movimentar()  # Chama o método movimentar, que imprime uma mensagem sobre o movimento do veículo
     meu_veiculo.get_fabr_modelo()  # Chama o método get_fabr_modelo, que imprime o modelo e fabricante do veículo
-    meu_veiculo.set_num_registro(490321 - 1)  # Define o número de registro do veículo usando o setter (490321 - 1 é avaliado como 490320)
+    meu_veiculo.set_num_registro('490321 - 1')  # Define o número de registro do veículo usando o setter (490321 - 1 é avaliado como 490320)
     print(f'Registro: {meu_veiculo.get_num_de_registro()}\n')  # Imprime o número de registro do veículo usando o getter
