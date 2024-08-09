@@ -43,10 +43,6 @@ class Motocicleta(Veiculo):
         print(f'Corro muito!')
 
 
-
-
-
-
 # Bloco principal do código, executado quando o script é executado diretamente
 if __name__ == '__main__':
     meu_veiculo = Veiculo('GM', 'Cadillac Escalade')  # Cria uma instância da classe Veiculo com fabricante 'GM' e modelo 'Cadillac Escalade'
@@ -68,3 +64,4 @@ if __name__ == '__main__':
 # OBS: Acessar atributos internos utilizando métodos é vantajoso pois é possivel programar esse método, de forma que os dados sejam acessíveis somente da forma que eu desejo, preservando assim a integridade desses dados. Recomendado por Fábio da Bóson Treinamentos, sempre utilizar atributos privados com __ e criar métodos getter para acessar esses atributos dentro de uma classe. 
 # USAMOS SETTER PARA GRAVAR O VALOR E O GETTER PARA OBTER O VALOR(fazer a leitura).     
 # O self é o que vai diferenciar um obejeto do outro
+# 
