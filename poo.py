@@ -1,67 +1,96 @@
-# Orientação a Objetos: Paradigma de Programação(estilo/forma de programar).
-# Classes e Objetos
-# Classes: São modelos abstratos que vão representar itens do mundo real dentro do software.
-# Objetos: Sao as ocorrências dessas classes, são essas classes carregadas na memória efetivamente existindo pra valer.
+# Orientação a Objetos:
+# - Paradigma de programação que utiliza classes e objetos.
+# - Classes: Modelos que representam entidades do mundo real.
+# - Objetos: Instâncias concretas das classes, existentes na memória.
 
-# SINTAXE CLASSE:
-    # Atributos: São propriedades das classes similares a variaveis, ou seja, estrutura que guardam valores.
-    # Métodos: São as funcionalidades ou ações que classe pode realizar ou sofrer(são similares a funções). Ou seja, uma função dentro de uma classe se chama método.
-    # Instanciar: Significa tornar a classe que é um modelo, real na memória do computador.
-#_______________________________________________________________________________________________________________________________________________________________________
+# Estrutura de uma Classe:
+# - Atributos: Propriedades que armazenam dados.
+# - Métodos: Funções dentro da classe que definem ações.
+# - Instanciar: Criar um objeto da classe na memória.
 
 class Veiculo:
     # Método que simula o movimento do veículo
     def movimentar(self):
-        print(f'Sou um veículo e me desloco!')
+        print('Sou um veículo e me desloco!')
 
-    # Método construtor que inicializa os atributos do veículo
-    def __init__(self, fabricante, modelo): # __INIT__: É O CONSTRUTOR QUE INICIALIZA A CLASSE
-        self.__fabricante = fabricante # Atribui o valor de 'fabricante' ao atributo privado '__fabricante' da instância
-        self.__modelo = modelo # Atributo privado para o modelo do veículo
-        self.__num_registro = None # Atributo privado para o número de registro do veículo, inicialmente definido como None
+    # Construtor que inicializa atributos
+    def __init__(self, fabricante, modelo):
+        self.__fabricante = fabricante  # Atributo privado para o fabricante
+        self.__modelo = modelo          # Atributo privado para o modelo
+        self.__num_registro = None      # Atributo privado para o número de registro
 
-
-    # Setter para o número de registro.   -> Setter: É um método que permite gravar um dado dentro do objeto.
+    # Setter para o número de registro
     def set_num_registro(self, registro):
-        self.__num_registro = registro # Atribui o valor recebido ao atributo privado __num_registro
+        self.__num_registro = registro  # Define o número de registro
 
-    # Getter para o fabricante e modelo do veículo -> Getter: É um método especial(função) que permite acessar os atributos de dentro da classe ou acessar outros elementos dentro da classe.
+    # Getter para fabricante e modelo
     def get_fabr_modelo(self):
-        print(f'Modelo: {self.__modelo}, Fabricante: {self.__fabricante}.\n')
+        print(f'Modelo: {self.__modelo}, Fabricante: {self.__fabricante}.')
 
-    # Getter para o número de registro do veículo
+    # Getter para o número de registro
     def get_num_de_registro(self):
-        return self.__num_registro  # Retorna o valor do atributo privado __num_registro
-        
+        return self.__num_registro  # Retorna o número de registro
+
+# Herança:
+# - Carro herda de Veiculo, adquirindo seus atributos e métodos.
 class Carro(Veiculo):
-    # Método __init__ será herdado
+    # Sobrescreve o método movimentar para uma implementação específica
     def movimentar(self):
-       print(f'Sou um carro e ando pelas ruas!') 
+        print('Sou um carro e ando pelas ruas!')
 
 class Motocicleta(Veiculo):
+    # Sobrescreve o método movimentar para uma implementação específica
     def movimentar(self):
-        print(f'Corro muito!')
+        print('Corro muito!')
 
+class Aviao(Veiculo):
+    def __init__(self, fabricante, modelo, categoria):
+        self.__cat = categoria  # Novo atributo específico para Avião
+        super().__init__(fabricante, modelo)  # Chama o construtor da classe base
+    
+    def get_categoria(self):
+        return self.__cat  # Retorna a categoria do avião
+    
+    # Sobrescreve o método movimentar para uma implementação específica
+    def movimentar(self):
+        print('Eu voo alto!')
 
-# Bloco principal do código, executado quando o script é executado diretamente
+# Bloco principal do código
 if __name__ == '__main__':
-    meu_veiculo = Veiculo('GM', 'Cadillac Escalade')  # Cria uma instância da classe Veiculo com fabricante 'GM' e modelo 'Cadillac Escalade'
-    meu_veiculo.movimentar()  # Chama o método movimentar, que imprime uma mensagem sobre o movimento do veículo
-    meu_veiculo.get_fabr_modelo()  # Chama o método get_fabr_modelo, que imprime o modelo e fabricante do veículo
-    meu_veiculo.set_num_registro('490321 - 1')  # Define o número de registro do veículo usando o setter (490321 - 1 é avaliado como 490320)
-    print(f'Registro: {meu_veiculo.get_num_de_registro()}\n')  # Imprime o número de registro do veículo usando o getter
+    meu_veiculo = Veiculo('GM', 'Cadillac Escalade')  # Cria um objeto da classe Veiculo
+    meu_veiculo.movimentar()  # Chama o método movimentar do Veiculo
+    meu_veiculo.get_fabr_modelo()  # Mostra modelo e fabricante
+    meu_veiculo.set_num_registro('490321 - 1')  # Define o número de registro
+    print(f'Registro: {meu_veiculo.get_num_de_registro()}')  # Mostra o número de registro
 
-    meu_carro = Carro('Volkswagen', 'Polo')
-    meu_carro.movimentar()
-    meu_carro.get_fabr_modelo()
+    meu_carro = Carro('Volkswagen', 'Polo')  # Cria um objeto da classe Carro
+    meu_carro.movimentar()  # Chama o método movimentar do Carro
+    meu_carro.get_fabr_modelo()  # Mostra modelo e fabricante do Carro
 
-    seu_carro = Carro('Audi', 'A5 Sportback ')
-    seu_carro.movimentar()
-    seu_carro.get_fabr_modelo()
+    seu_carro = Carro('Audi', 'A5 Sportback')  # Cria outro objeto da classe Carro
+    seu_carro.movimentar()  # Chama o método movimentar do Carro
+    seu_carro.get_fabr_modelo()  # Mostra modelo e fabricante do Carro
 
+    moto = Motocicleta('Harley-Davidson', 'Nightster Special')  # Cria um objeto da classe Motocicleta
+    moto.movimentar()  # Chama o método movimentar da Motocicleta
+    moto.get_fabr_modelo()  # Mostra modelo e fabricante da Motocicleta
 
+    meu_aviao = Aviao('Boeing', '747', 'Comercial')  # Cria um objeto da classe Aviao
+    meu_aviao.movimentar()  # Chama o método movimentar do Aviao
+    meu_aviao.get_fabr_modelo()  # Mostra modelo e fabricante do Aviao
+    print(f'Categoria: {meu_aviao.get_categoria()}')  # Mostra a categoria do Aviao
 
-# OBS: Acessar atributos internos utilizando métodos é vantajoso pois é possivel programar esse método, de forma que os dados sejam acessíveis somente da forma que eu desejo, preservando assim a integridade desses dados. Recomendado por Fábio da Bóson Treinamentos, sempre utilizar atributos privados com __ e criar métodos getter para acessar esses atributos dentro de uma classe. 
-# USAMOS SETTER PARA GRAVAR O VALOR E O GETTER PARA OBTER O VALOR(fazer a leitura).     
-# O self é o que vai diferenciar um obejeto do outro
-# 
+# Observações:
+# Encapsulamento:
+# - Atributos privados (com __) protegem dados e são acessados via métodos (getters e setters).
+# - Getters obtêm valores, setters definem valores.
+
+# Herança:
+# - Carro e Motocicleta herdam de Veiculo e podem extender ou modificar seus comportamentos.
+# - Exemplo: Carro e Motocicleta redefinem o método movimentar.
+
+# Polimorfismo:
+# - Permite que métodos com o mesmo nome (movimentar) tenham comportamentos diferentes em classes diferentes.
+# - Exemplo: movimentar é implementado de forma distinta em Veiculo, Carro, Motocicleta e Aviao.
+
+# 'self' refere-se à instância atual da classe e é usado para acessar atributos e métodos da instância.
