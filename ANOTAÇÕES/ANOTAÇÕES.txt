@@ -1563,11 +1563,11 @@ Repete o processo até que todos os itens da sequência tenham sido usados, resu
 Sintaxe
 A sintaxe básica da função reduce é:
 
-
 reduce(function, iterable[, initializer])
 function: A função que será aplicada. Deve aceitar dois argumentos.
 iterable: A sequência de elementos sobre a qual a função será aplicada.
 initializer (opcional): Um valor inicial para a operação. Se fornecido, será usado como o primeiro argumento para a função, e o primeiro item da sequência será o segundo argumento.
+
 Exemplo
 Vamos considerar um exemplo básico onde queremos multiplicar todos os números em uma lista:
 
@@ -1840,6 +1840,73 @@ Polimorfismo: É evidente no exemplo acima, onde o método falar se comporta de 
 Abstração: A classe Animal serve como uma abstração que define um conjunto de comportamentos esperados (falar) sem especificar como esses comportamentos devem ser implementados.
 
 A Orientação a Objetos ajuda a criar sistemas de software mais organizados e reutilizáveis, facilitando a modelagem e manutenção do código.
+_______________________________________________________________________________________________________________________________________________________________________
+		
+			MÓDULO OS
+O módulo os em Python fornece uma maneira de interagir com o sistema operacional em que seu código está sendo executado. Ele oferece uma variedade de funções para realizar operações relacionadas ao sistema de arquivos e ao ambiente do sistema.
+
+Aqui estão alguns dos recursos e funções mais comuns do módulo os:
+
+Manipulação de Arquivos e Diretórios:
+
+os.getcwd(): Retorna o diretório de trabalho atual.
+os.chdir(path): Altera o diretório de trabalho atual para o caminho especificado.
+os.listdir(path): Lista os arquivos e diretórios no caminho especificado.
+os.mkdir(path): Cria um novo diretório no caminho especificado.
+os.makedirs(path): Cria diretórios recursivamente (ou seja, cria diretórios intermediários se não existirem).
+os.rmdir(path): Remove um diretório vazio.
+os.removedirs(path): Remove diretórios recursivamente (ou seja, remove o diretório especificado e qualquer diretório vazio pai).
+os.rename(src, dst): Renomeia um arquivo ou diretório de src para dst.
+os.remove(path): Remove um arquivo.
+Informações sobre o Sistema:
+
+os.name: Retorna o nome do sistema operacional. Pode ser 'posix', 'nt', 'os2', 'ce', 'java', etc.
+os.uname(): Retorna informações sobre o sistema operacional (disponível apenas em sistemas Unix).
+os.environ: Um dicionário que representa as variáveis de ambiente do sistema.
+Manipulação de Caminhos:
+
+os.path.join(path, *paths): Junta um ou mais componentes de caminho de forma adequada para o sistema operacional.
+os.path.exists(path): Verifica se o caminho especificado existe.
+os.path.isfile(path): Verifica se o caminho especificado é um arquivo.
+os.path.isdir(path): Verifica se o caminho especificado é um diretório.
+os.path.abspath(path): Retorna o caminho absoluto do caminho especificado.
+os.path.split(path): Divide o caminho em um par (diretório, nome do arquivo).
+os.path.splitext(path): Divide o caminho em um par (nome do arquivo, extensão).
+Execução de Comandos do Sistema:
+
+os.system(command): Executa o comando do sistema especificado como uma string. Retorna o status de saída do comando.
+Manipulação de Processos:
+
+os.getpid(): Retorna o ID do processo atual.
+os.getppid(): Retorna o ID do processo pai.
+Exemplo de uso básico do módulo os:
+
+python
+Copiar código
+import os
+
+# Diretório de trabalho atual
+current_directory = os.getcwd()
+print(f"Diretório atual: {current_directory}")
+
+# Listar arquivos e diretórios no diretório atual
+files_and_dirs = os.listdir(current_directory)
+print("Arquivos e diretórios:", files_and_dirs)
+
+# Criar um novo diretório
+new_directory = 'novo_diretorio'
+os.mkdir(new_directory)
+print(f"Diretório '{new_directory}' criado.")
+
+# Alterar o diretório de trabalho
+os.chdir(new_directory)
+print(f"Novo diretório de trabalho: {os.getcwd()}")
+
+# Voltar para o diretório original e remover o novo diretório
+os.chdir('..')
+os.rmdir(new_directory)
+print(f"Diretório '{new_directory}' removido.")
+Esse módulo é bastante útil para operações que precisam interagir com o sistema de arquivos e o ambiente do sistema operacional.
 
 
 
