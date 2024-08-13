@@ -36,6 +36,10 @@
 
 #  os.makedirs() Criar diretórios de forma recursiva(criar varios diretórios de uma vez, um dentro do outro):
 
+# os.path.exists(caminho) -> Verificar se um caminho existe ou não. Retorna um booleano.
+# os.path.isdir() -> Verificar se um item é um diretório.
+# os.path.isfile() -> Verficar se um item é um arquivo.
+
 
 # EXEMPLO DE USO -> Criar pastas fora do diretório atual, especificamente em um diretório diferente
 
