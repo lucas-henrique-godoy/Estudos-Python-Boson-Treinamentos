@@ -115,6 +115,45 @@
 
 # BIBLIOTECA SHUTIL:  um módulo padrão do Python que oferece uma coleção de funções para manipulação de arquivos e operações relacionadas a arquivos e diretórios. Ele fornece funcionalidades para copiar, mover e deletar arquivos e diretórios, além de outras operações úteis.
 
+# EX01: REMOVER A ÁRVORE DE DIRETÓRIOS
+# import shutil
+# shutil.rmtree(caminho)
+
+#_______________________________________________________________________________________________________________________
+
+# PROJETO RENOMEAR TODOS OS ARQUIVOS DE UMA PASTA USANDO UM PADRÃO
+# Como exemplo eu criei uma pasta contendo 16 arquivos txt 
+
+import os  # Importa o módulo os para interações com o sistema operacional
+
+# Altera o diretório de trabalho para 'c:\\Teste'
+# Isso é necessário para garantir que todas as operações de arquivo ocorram no diretório especificado
+os.chdir('c:\\Teste')
+
+# Exibe o diretório atual para confirmação
+print(f'Diretório atual: {os.getcwd()}')
+
+# Solicita ao usuário o padrão de nomes a ser usado para renomear os arquivos
+padrao_nome = input('Qual o padrão de nomes de arquivos a usar (sem a extensão)? ')
+
+# Itera sobre todos os arquivos e diretórios no diretório atual
+for contador, arq in enumerate(os.listdir()):
+    # Verifica se o item é um arquivo (e não um diretório)
+    if os.path.isfile(arq):
+        # Divide o nome do arquivo e a extensão em duas partes
+        nome_arq, exten_arq = os.path.splitext(arq)
+        
+        # Cria um novo nome para o arquivo usando o padrão fornecido e um número sequencial
+        nome_arq = padrao_nome + ' ' + str(contador)
+        
+        # Cria o novo nome completo do arquivo (incluindo a extensão)
+        nome_novo = f'{nome_arq}{exten_arq}'
+        
+        # Renomeia o arquivo do nome atual para o novo nome
+        os.rename(arq, nome_novo)
+
+# Exibe uma mensagem indicando que a renomeação foi concluída
+print(f'Arquivos renomeados.')
 
 
 
