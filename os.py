@@ -22,7 +22,9 @@
 
 # os.rename('c:\\Teste3', 'c:\\Teste10') -> Renomeia uma pasta. Neste exemplo muda o nome da pasta de TESTE2 para Teste10. Obs: Se eu ja estivesse dentro do c:, ou seja, se ele fosse o diretório atual em que eu estivesse,  era so usar os.rename('Teste3', 'Teste10').
 
-# os.rmdir(caminho da pasta)  Remove uma pasta(se ela estiver vazia).
+# os.rmdir(caminho da pasta)  Remove um diretório se estiver vazio.
+
+# os.remove() -> Remove um arquivo.
 
 # os.path.basename(path) -> Retorna o nome base do caminho fornecido, que pode ser um arquivo ou diretório.
 #print(os.path.basename('C:\\Users\\SeuUsuario\\Documents\\arquivo.txt'))  # Saída: 'arquivo.txt'
@@ -39,9 +41,10 @@
 # os.path.exists(caminho) -> Verificar se um caminho existe ou não. Retorna um booleano.
 # os.path.isdir() -> Verificar se um item é um diretório.
 # os.path.isfile() -> Verficar se um item é um arquivo.
+# os.path.splitext()-> Obter o nome de um arquivo e separa da sua extensão.
 
 
-# EXEMPLO DE USO -> Criar pastas fora do diretório atual, especificamente em um diretório diferente
+# EXEMPLO DE USO 1 -> Criar pastas fora do diretório atual, especificamente em um diretório diferente
 
 #import os  # Importa o módulo os, que fornece funções para interagir com o sistema operacional
 
@@ -65,5 +68,54 @@
 
 # Lista o conteúdo do diretório 'c:\\' para verificar a presença da nova pasta criada
 #print(os.listdir('c:\\'))
+
+# EXEMPLO DE USO 2 -> O código cria um arquivo, lista os arquivos do diretório atual, extrai e exibe o nome e a extensão do arquivo recém-criado.
+
+#import os  # Importa o módulo 'os' para interação com o sistema operacional
+
+# Criação de um novo arquivo. O modo 'x' cria o arquivo somente se ele não existir, caso contrário, gera uma exceção.
+#manipulador = open('arq.txt', 'x')
+#manipulador.close()  # Fecha o arquivo após a criação para liberar recursos.
+
+# Lista os arquivos e diretórios no diretório atual.
+# Isso mostra todos os arquivos e pastas presentes no diretório onde o script está sendo executado.
+#print(os.listdir())
+# Saída esperada: ['.git', '.gitattributes', 'aleatorios.py', ..., 'arq.txt', ...]
+
+# Obtém o nome base do arquivo a partir de um caminho completo.
+# Aqui, 'os.path.basename' extrai o nome do arquivo do caminho completo fornecido.
+#arquivo = os.path.basename('C:\\Users\\lucasgodoy\\Desktop\\Estudos-Python-Boson-Treinamentos\\arq.txt')
+
+# Exibe o nome do arquivo extraído.
+#print(arquivo)  # Saída esperada: 'arq.txt'
+
+# Divide o nome do arquivo em duas partes: nome e extensão.
+# 'os.path.splitext' separa o nome do arquivo da sua extensão.
+# Retorna uma tupla onde o primeiro elemento é o nome do arquivo e o segundo é a extensão.
+#print(os.path.splitext(arquivo))
+# Saída esperada: ('arq', '.txt')
+
+#_______________________________________________________________________________________________________________________
+
+# BIBLIOTECA PATHLIB: é uma biblioteca padrão do Python que fornece uma maneira orientada a objetos para manipulação de caminhos de arquivos e diretórios.
+# EXEMPLOS DE USOS:
+
+#EX01:
+# Importa a biblioteca pathlib para manipulação de caminhos
+#import pathlib
+
+# Cria um objeto Path representando o diretório atual
+#caminho = pathlib.Path()
+
+# Obtém e exibe o diretório de trabalho atual
+#print(caminho.cwd())  # Output esperado: o caminho completo do diretório atual
+
+#EX02:
+
+
+# BIBLIOTECA SHUTIL:  um módulo padrão do Python que oferece uma coleção de funções para manipulação de arquivos e operações relacionadas a arquivos e diretórios. Ele fornece funcionalidades para copiar, mover e deletar arquivos e diretórios, além de outras operações úteis.
+
+
+
 
 
