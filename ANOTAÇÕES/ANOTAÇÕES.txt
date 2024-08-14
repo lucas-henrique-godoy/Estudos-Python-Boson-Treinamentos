@@ -1907,6 +1907,61 @@ os.chdir('..')
 os.rmdir(new_directory)
 print(f"Diretório '{new_directory}' removido.")
 Esse módulo é bastante útil para operações que precisam interagir com o sistema de arquivos e o ambiente do sistema operacional.
+_______________________________________________________________________________________________________________________________________________________________________
+Manipulação de Arquivos de Texto em Python
+Em Python, a manipulação de arquivos de texto é realizada principalmente com a função open() e métodos associados. Aqui estão os conceitos básicos:
+
+Abrir Arquivo:
+
+Para abrir um arquivo, usamos a função open(), que recebe o nome do arquivo e o modo de abertura.
+Modos comuns:
+'r': Leitura (padrão). O arquivo deve existir.
+'w': Escrita. Cria um novo arquivo ou trunca (apaga) um existente.
+'a': Anexar. Adiciona dados ao final do arquivo existente.
+'x': Exclusivo. Cria um novo arquivo, gerando um erro se o arquivo já existir.
+'b': Modo binário, que pode ser combinado com outros modos (por exemplo, 'rb' para leitura binária).
+
+arquivo = open('exemplo.txt', 'r')  # Abre o arquivo para leitura
+Ler Arquivo:
+
+read(size): Lê o conteúdo do arquivo até o tamanho especificado. Se size não for fornecido, lê o arquivo inteiro.
+readline(): Lê uma única linha do arquivo.
+readlines(): Lê todas as linhas e retorna uma lista de linhas.
+
+conteudo = arquivo.read()          # Lê o conteúdo completo
+linha = arquivo.readline()         # Lê uma linha
+linhas = arquivo.readlines()       # Lê todas as linhas
+Escrever em Arquivo:
+
+write(string): Escreve a string no arquivo. Não adiciona uma nova linha automaticamente.
+writelines(lines): Escreve uma lista de linhas no arquivo.
+
+arquivo = open('exemplo.txt', 'w')  # Abre o arquivo para escrita
+arquivo.write('Olá, Mundo!\n')      # Escreve uma linha no arquivo
+arquivo.writelines(['Linha 1\n', 'Linha 2\n'])  # Escreve várias linhas
+Fechar Arquivo:
+
+Após terminar a manipulação, é importante fechar o arquivo para liberar recursos com o método close().
+
+arquivo.close()  # Fecha o arquivo
+Usando with:
+
+A declaração with é recomendada para manipular arquivos, pois garante que o arquivo seja fechado automaticamente, mesmo que ocorra um erro.
+
+with open('exemplo.txt', 'r') as arquivo:
+    conteudo = arquivo.read()
+Exemplo Completo
+
+# Abre um arquivo para escrita e adiciona algumas linhas
+with open('exemplo.txt', 'w') as arquivo:
+    arquivo.write('Primeira linha\n')
+    arquivo.write('Segunda linha\n')
+
+# Lê o conteúdo do arquivo e imprime
+with open('exemplo.txt', 'r') as arquivo:
+    conteudo = arquivo.read()
+    print(conteudo)
+Este exemplo mostra como abrir um arquivo para escrita, adicionar algumas linhas e depois ler o conteúdo do arquivo para exibição. O uso de with ajuda a garantir que o arquivo seja corretamente fechado após a operação.
 
 
 
