@@ -1,160 +1,106 @@
-# Módulo os(OPERATE SYSTEM): Muito empregado a realização de funções relacionadas a sistemas de arquivos, arquivos em geral, diretórios, e outras funcionalidades de sistema operacional. Podemos fazer uma série de tarefas relacionadas a arquivos, diretórios e pastas, etc. Para usar o módulos devemos seguir os seguintes passos:
-# 1 - Abrir o terminal,
-# 2- Digitar py no terminal para entrar no interpretador interativo do python,
-# 3- Importar o módulo os digitando: import os.
-# EXEMPLOS:
+# Módulo os (Sistema Operacional):
+# O módulo os em Python é amplamente utilizado para realizar funções relacionadas a sistemas de arquivos, arquivos em geral, diretórios e outras funcionalidades do sistema operacional. 
+# Com ele, podemos realizar uma série de tarefas relacionadas a arquivos, diretórios e pastas.
 
-# os.name -> Retorna uma string relacionada ao tipo do sistema operacional se for Windows retorna'nt', e se for MAC ou Linux retorna 'posix'.
+# Passos para usar o módulo os:
+# 1. Abra o terminal.
+# 2. Digite python no terminal para entrar no interpretador interativo do Python.
+# 3. Importe o módulo os com o comando: import os.
 
-# os.getcwd() -> Retorna qual o diretório atual em que o código esta aberto.
+# Exemplos de uso do módulo os:
 
-# os.curdir -> É um atalho. Retorna um ponto '.' , que siginifica um atalho para o diretório atual, quando eu quiser realizar algum tipo de tarefa que faça referencia direta ao diretorio atual(aberto), eu posso utilizar o ponto ou escrever os.curdir(mais indicado pois o próprio pytohn gerencia isso.)
+# os.name -> Retorna uma string que identifica o tipo de sistema operacional. Para Windows, retorna 'nt', e para macOS ou Linux, retorna 'posix'.
 
-# os.listdir() -> Visualizar o conteúdo do diretorio atual. 
+# os.getcwd() -> Retorna o diretório de trabalho atual.
 
-# os.listdir('c:\\') -> Visualizar o conteúdo de outro diretorio que não seja o diretório atual. (Neste caso visualizando o que tem na raiz do meu sistema). 
+# os.curdir -> Um atalho que retorna '.' (o diretório atual). É preferível usar os.curdir para referência ao diretório atual, pois o Python gerencia isso internamente.
 
-# os.chdir('c:\\') -> Mudar de diretório, pode ser um absoluto(desde a raiz ate a pasta desejada) ou relativo(a partir do diretório atual, entre em uma outra pasta). (Neste exemplo mudou para o diretório raiz do drive C: em sistemas Windows, se quiser ver o diretorio atual é so usar os.getcwd e vera que que esta na raiz).
+# os.listdir() -> Lista o conteúdo do diretório atual.
 
-# os.path.join() junta dois ou mais pedaços de um caminho de arquivo. Monta" ou "constrói" um caminho de arquivo. Essa expressão é apropriada porque a função combina várias partes de um caminho em um único caminho completo, utilizando o separador de diretórios correto para o sistema operacional.
+# os.listdir('c:\\') -> Lista o conteúdo de outro diretório, especificado no caminho (neste exemplo, a raiz do sistema).
 
-# os.mkdir('Teste') -> Cria uma pasta.(Neste exemplo nós criamos uma pasta chamada Teste no diretorio raiz do drive C:)
+# os.chdir('c:\\') -> Altera o diretório de trabalho para o especificado. Pode usar um caminho absoluto (desde a raiz até a pasta desejada) ou relativo (a partir do diretório atual).
 
-# os.rename('c:\\Teste3', 'c:\\Teste10') -> Renomeia uma pasta. Neste exemplo muda o nome da pasta de TESTE2 para Teste10. Obs: Se eu ja estivesse dentro do c:, ou seja, se ele fosse o diretório atual em que eu estivesse,  era so usar os.rename('Teste3', 'Teste10').
+# os.path.join() -> Junta dois ou mais pedaços de um caminho de arquivo, formando um caminho completo e correto para o sistema operacional.
 
-# os.rmdir(caminho da pasta)  Remove um diretório se estiver vazio.
+# os.mkdir('Teste') -> Cria um diretório. No exemplo, cria a pasta 'Teste' no diretório atual.
+
+# os.rename('c:\\Teste3', 'c:\\Teste10') -> Renomeia um diretório. No exemplo, a pasta 'Teste3' é renomeada para 'Teste10'. Se já estiver no diretório 'c:\\', pode usar apenas os.rename('Teste3', 'Teste10').
+
+# os.rmdir(caminho) -> Remove um diretório, desde que esteja vazio.
 
 # os.remove() -> Remove um arquivo.
 
 # os.path.basename(path) -> Retorna o nome base do caminho fornecido, que pode ser um arquivo ou diretório.
-#print(os.path.basename('C:\\Users\\SeuUsuario\\Documents\\arquivo.txt'))  # Saída: 'arquivo.txt'
+# Exemplo:
+# print(os.path.basename('C:\\Users\\SeuUsuario\\Documents\\arquivo.txt'))  # Saída: 'arquivo.txt'
 
-# os.path.basename(os.getcwd()) -> Retorna o nome base do diretório de trabalho atual, que é o nome do diretório onde o script está sendo executado.
-#print(os.path.basename(os.getcwd()))
+# os.path.basename(os.getcwd()) -> Retorna o nome base do diretório de trabalho atual.
+# Exemplo:
+# print(os.path.basename(os.getcwd()))
 
-# os.path.dirname(path) -> Retorna o caminho do diretório pai do caminho fornecido.
-# Quando usado com os.getcwd(), retorna o diretório pai do diretório de trabalho atual.
-#print(os.path.dirname(os.getcwd()))
+# os.path.dirname(path) -> Retorna o caminho do diretório pai do caminho fornecido. Usado com os.getcwd(), retorna o diretório pai do diretório de trabalho atual.
+# Exemplo:
+# print(os.path.dirname(os.getcwd()))
 
-#  os.makedirs() Criar diretórios de forma recursiva(criar varios diretórios de uma vez, um dentro do outro):
+# os.makedirs() -> Cria diretórios de forma recursiva (vários diretórios em uma única operação).
 
-# os.path.exists(caminho) -> Verificar se um caminho existe ou não. Retorna um booleano.
-# os.path.isdir() -> Verificar se um item é um diretório.
-# os.path.isfile() -> Verficar se um item é um arquivo.
-# os.path.splitext()-> Obter o nome de um arquivo e separa da sua extensão.
+# os.path.exists(caminho) -> Verifica se um caminho existe ou não, retornando um valor booleano.
 
+# os.path.isdir(caminho) -> Verifica se um item é um diretório.
 
-# EXEMPLO DE USO 1 -> Criar pastas fora do diretório atual, especificamente em um diretório diferente
+# os.path.isfile(caminho) -> Verifica se um item é um arquivo.
 
-#import os  # Importa o módulo os, que fornece funções para interagir com o sistema operacional
+# os.path.splitext(path) -> Obtém o nome de um arquivo e separa a extensão.
+# Exemplo:
+# print(os.path.splitext('arquivo.txt'))  # Saída: ('arquivo', '.txt')
 
-# Define o nome da nova pasta que será criada
-#pasta_nova = 'Teste3'
+# Exemplos de uso do módulo os:
 
-# Define o caminho da pasta pai onde a nova pasta será criada
-#pasta_pai = 'c:\\'
+# Exemplo 1: Criar pastas fora do diretório atual
+# import os
+# pasta_nova = 'Teste3'
+# pasta_pai = 'c:\\'
+# caminho_completo = os.path.join(pasta_pai, pasta_nova)
+# print(caminho_completo)
+# os.mkdir(caminho_completo)
+# print(os.listdir())
+# print(os.listdir('c:\\'))
 
-# Cria o caminho completo para a nova pasta, combinando o caminho da pasta pai com o nome da nova pasta
-#caminho_completo = os.path.join(pasta_pai, pasta_nova)
+# Exemplo 2: Criar um arquivo e listar arquivos do diretório atual
+# import os
+# # Criação de um novo arquivo
+# manipulador = open('arq.txt', 'x')
+# manipulador.close()
+# print(os.listdir())
+# arquivo = os.path.basename('C:\\Users\\lucasgodoy\\Desktop\\Estudos-Python-Boson-Treinamentos\\arq.txt')
+# print(arquivo)
+# print(os.path.splitext(arquivo))
 
-# Exibe o caminho completo da nova pasta para confirmação
-#print(caminho_completo)
+# Biblioteca pathlib:
+# A biblioteca pathlib fornece uma maneira orientada a objetos para manipulação de caminhos de arquivos e diretórios.
 
-# Cria a nova pasta no caminho especificado
-#os.mkdir(caminho_completo)
+# Exemplo:
+# import pathlib
+# caminho = pathlib.Path()
+# print(caminho.cwd())
 
-# Lista o conteúdo do diretório atual (sem parâmetros, lista o diretório atual onde o script está sendo executado)
-#print(os.listdir())  # Este comando mostra o conteúdo do diretório de trabalho atual, não do diretório especificado
+# Biblioteca shutil:
+# A biblioteca shutil oferece funções para manipulação de arquivos e operações relacionadas, como copiar, mover e deletar arquivos e diretórios.
 
-# Lista o conteúdo do diretório 'c:\\' para verificar a presença da nova pasta criada
-#print(os.listdir('c:\\'))
-
-# EXEMPLO DE USO 2 -> O código cria um arquivo, lista os arquivos do diretório atual, extrai e exibe o nome e a extensão do arquivo recém-criado.
-
-#import os  # Importa o módulo 'os' para interação com o sistema operacional
-
-# Criação de um novo arquivo. O modo 'x' cria o arquivo somente se ele não existir, caso contrário, gera uma exceção.
-#manipulador = open('arq.txt', 'x')
-#manipulador.close()  # Fecha o arquivo após a criação para liberar recursos.
-
-# Lista os arquivos e diretórios no diretório atual.
-# Isso mostra todos os arquivos e pastas presentes no diretório onde o script está sendo executado.
-#print(os.listdir())
-# Saída esperada: ['.git', '.gitattributes', 'aleatorios.py', ..., 'arq.txt', ...]
-
-# Obtém o nome base do arquivo a partir de um caminho completo.
-# Aqui, 'os.path.basename' extrai o nome do arquivo do caminho completo fornecido.
-#arquivo = os.path.basename('C:\\Users\\lucasgodoy\\Desktop\\Estudos-Python-Boson-Treinamentos\\arq.txt')
-
-# Exibe o nome do arquivo extraído.
-#print(arquivo)  # Saída esperada: 'arq.txt'
-
-# Divide o nome do arquivo em duas partes: nome e extensão.
-# 'os.path.splitext' separa o nome do arquivo da sua extensão.
-# Retorna uma tupla onde o primeiro elemento é o nome do arquivo e o segundo é a extensão.
-#print(os.path.splitext(arquivo))
-# Saída esperada: ('arq', '.txt')
-
-#_______________________________________________________________________________________________________________________
-
-# BIBLIOTECA PATHLIB: é uma biblioteca padrão do Python que fornece uma maneira orientada a objetos para manipulação de caminhos de arquivos e diretórios.
-# EXEMPLOS DE USOS:
-
-#EX01:
-# Importa a biblioteca pathlib para manipulação de caminhos
-#import pathlib
-
-# Cria um objeto Path representando o diretório atual
-#caminho = pathlib.Path()
-
-# Obtém e exibe o diretório de trabalho atual
-#print(caminho.cwd())  # Output esperado: o caminho completo do diretório atual
-
-#EX02:
-
-
-# BIBLIOTECA SHUTIL:  um módulo padrão do Python que oferece uma coleção de funções para manipulação de arquivos e operações relacionadas a arquivos e diretórios. Ele fornece funcionalidades para copiar, mover e deletar arquivos e diretórios, além de outras operações úteis.
-
-# EX01: REMOVER A ÁRVORE DE DIRETÓRIOS
+# Exemplo: Remover a árvore de diretórios
 # import shutil
 # shutil.rmtree(caminho)
 
-#_______________________________________________________________________________________________________________________
-
-# PROJETO RENOMEAR TODOS OS ARQUIVOS DE UMA PASTA USANDO UM PADRÃO
-# Como exemplo eu criei uma pasta contendo 16 arquivos txt 
-
-import os  # Importa o módulo os para interações com o sistema operacional
-
-# Altera o diretório de trabalho para 'c:\\Teste'
-# Isso é necessário para garantir que todas as operações de arquivo ocorram no diretório especificado
-os.chdir('c:\\Teste')
-
-# Exibe o diretório atual para confirmação
-print(f'Diretório atual: {os.getcwd()}')
-
-# Solicita ao usuário o padrão de nomes a ser usado para renomear os arquivos
-padrao_nome = input('Qual o padrão de nomes de arquivos a usar (sem a extensão)? ')
-
-# Itera sobre todos os arquivos e diretórios no diretório atual
-for contador, arq in enumerate(os.listdir()):
-    # Verifica se o item é um arquivo (e não um diretório)
-    if os.path.isfile(arq):
-        # Divide o nome do arquivo e a extensão em duas partes
-        nome_arq, exten_arq = os.path.splitext(arq)
-        
-        # Cria um novo nome para o arquivo usando o padrão fornecido e um número sequencial
-        nome_arq = padrao_nome + ' ' + str(contador)
-        
-        # Cria o novo nome completo do arquivo (incluindo a extensão)
-        nome_novo = f'{nome_arq}{exten_arq}'
-        
-        # Renomeia o arquivo do nome atual para o novo nome
-        os.rename(arq, nome_novo)
-
-# Exibe uma mensagem indicando que a renomeação foi concluída
-print(f'Arquivos renomeados.')
-
-
-
-
+# Projeto: Renomear todos os arquivos de uma pasta usando um padrão
+# import os
+# os.chdir('c:\\Teste')
+# print(f'Diretório atual: {os.getcwd()}')
+# padrao_nome = input('Qual o padrão de nomes de arquivos a usar (sem a extensão)? ')
+# for contador, arq in enumerate(os.listdir()):
+#     if os.path.isfile(arq):
+#         nome_arq, exten_arq = os.path.splitext(arq)
+#         nome_arq = padrao_nome + ' ' + str(contador)
+#         nome_novo = f'{nome_arq}{exten_arq}'
+#         os.rename(arq, nome_novo)
+# print('Arquivos renomeados.')
