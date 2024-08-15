@@ -1,4 +1,5 @@
-Um arquivo é uma área em um dispositivo de armazenamento onde gravamos e lemos dados.
-Arquivos de texto simples (plano) são uma sequência estruturada de linhas, contendo caracteres, sem informações 
-Cada linha em um arquivo de texto é terminada com um caractere especial de fim de linha , o  EOL (End Of Line)
-No geral, o caractere EOL é o \n.
+Bóson Treinamentos
+Como criar um arquivo de texto com Python.
+Python é muito empregado em IA.
+Inteligência Artificial veio para ficar!
+Python é usado em Ciência de Dados extensivamente
